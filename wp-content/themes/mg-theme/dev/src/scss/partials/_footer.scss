@@ -1,0 +1,99 @@
+.main-footer{
+  &__row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    border-top: 1px solid #E7E7E7;
+    border-bottom: 1px solid #E7E7E7;
+  }
+  &__info{
+    font-size: rem(14);
+    font-weight: 400;
+    line-height: 1.5;
+    display: flex;
+    width: 50%;
+    margin-bottom: 10px;
+    &-row{
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: 80px;
+      .btn{
+        width: 270px;
+        position: relative;
+        padding: 15px 10px 15px 35px;
+        text-align: left;
+        overflow: visible;
+        display: block;
+        img{
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%)
+        }
+      }
+    }
+    svg{
+      margin-right: rem(10);
+      path{
+        fill: #388B2A;
+      }
+    }
+    &-sm{
+      font-size: rem(12);
+    }
+  }
+  &__slogan{}
+  .logo{
+    display: block;
+    margin-right: clamp(10px, cqi(22), 22px);
+  }
+  .btn__phone{
+    margin-bottom: 15px;
+    display: block;
+  }
+  ul{
+    padding-top: 17px;
+    li{
+      position: relative;
+      padding: 0;
+      margin: 0;
+      padding-left: 14px;
+      &:before{
+        content: "";
+        background: #388B2A;
+        border-radius: 50%;
+        width: 7px;
+        height: 7px;
+        position: absolute;
+        left: 0;
+        top: 8px;
+      }
+      &:not(:first-child){
+        margin-top: 8px;
+      }
+    }
+  }
+  &__first{
+    width: 225px;
+    margin-right: 50px;
+  }
+  &__second{
+    margin-right: 70px;
+  }
+  &__bottom{
+    padding-bottom: 15px;
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__powered{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    svg{
+      margin-left: 10px;
+    }
+  }
+}

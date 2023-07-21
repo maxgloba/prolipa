@@ -1,0 +1,17 @@
+$width: 1654;
+$width-px: ($width)+px;
+@function vw($px-vw, $base-vw: 1654px){
+  @return $px-vw * 100vw / $base-vw;
+}
+
+@function cqi($fz){
+  @return $fz / $width * 100cqi;
+}
+
+@function rem($px){
+  @return ($px / 16) + rem;
+}
+
+@function res($min, $max){
+  @return clamp(rem($min), cqi($max), rem($max));
+}

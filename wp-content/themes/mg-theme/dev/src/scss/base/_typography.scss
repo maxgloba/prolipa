@@ -1,0 +1,75 @@
+html, body, *{
+  font-family: 'Roboto', sans-serif;
+}
+
+body{
+  color: var(--text-color);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+//font-family: 'Akrobat', sans-serif; font-weight: 500;
+//font-family: 'Akrobat Light', sans-serif; font-weight: 400;
+//font-family: 'Akrobat ExtraLight', sans-serif; font-weight: 300;
+//font-family: 'Akrobat SemiBold', sans-serif; font-weight: 600;
+//font-family: 'Akrobat Bold', sans-serif; font-weight: 700;
+//font-family: 'Akrobat ExtraBold', sans-serif; font-weight: 800;
+//font-family: 'Akrobat Black', sans-serif; font-weight: 900;
+
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Akrobat', sans-serif;
+  font-style: normal;
+  margin: 0;
+}
+
+h1{
+  font-size: clamp(32px, cqi(48), 48px);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.25;
+  @media(min-width:768px){
+    font-weight: 700;
+  }
+}
+
+h2{
+  font-size: clamp(28px, cqi(40), 40px);
+  font-weight: 500;
+  line-height: 1.2;
+  text-transform: uppercase;
+  @media(min-width:768px){
+    font-weight: 700;
+  }
+}
+
+h3{
+  font-size: clamp(24px, cqi(32), 32px);
+  font-weight: 500;
+  line-height: 1.25;
+  text-transform: uppercase;
+  @media(min-width:768px){
+    font-weight: 700;
+  }
+}
+
+h4{
+  font-size: clamp(20px, cqi(24), 24px);
+  font-weight: 500;
+  line-height: 1.3;
+  text-transform: uppercase;
+  @media(min-width:768px){
+    font-weight: 600;
+  }
+}
+
+h5{
+  font-size: clamp(18px, cqi(20), 20px);
+  font-weight: 500;
+  line-height: 1.2;
+  text-transform: uppercase;
+  @media(min-width:768px){
+    font-weight: 600;
+  }
+}

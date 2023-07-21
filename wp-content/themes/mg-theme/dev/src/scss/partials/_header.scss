@@ -1,0 +1,50 @@
+.main-header{
+  border-bottom: 1px solid #E7E7E7;
+  z-index: 10;
+  position: fixed;
+  left: 0; right: 0;
+  top: 0;
+  transition: background .5s ease;
+  &__row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: rem(89);
+  }
+  &__info{
+    font-size: rem(14);
+    font-weight: 400;
+    line-height: 1.5;
+    display: flex;
+    margin-left: clamp(15px, cqi(42), 42px);
+    svg{
+      margin-right: rem(10);
+    }
+    &-sm{
+      font-size: rem(12);
+    }
+  }
+  &__white{
+    color: #FFF;
+  }
+  &__slogan{
+    margin-right: clamp(100px, cqi(255), 255px);
+  }
+  .logo{
+    display: block;
+    margin-right: clamp(10px, cqi(22), 22px);
+  }
+  .btn__phone{
+    margin-left: auto;
+    margin-right: clamp(15px, cqi(49), 49px);
+  }
+  &.scrolling{
+    background: #fff;
+    .main-header__white{
+      color: #000;
+      svg path{
+        fill: #388B2A;
+      }
+    }
+  }
+}
