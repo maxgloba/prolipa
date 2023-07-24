@@ -4,10 +4,10 @@
     padding-top: 30px;
     border-top: 1px solid #E7E7E7;
     border-bottom: 1px solid #E7E7E7;
-    @media(max-width:767px){
+    @media(max-width:991px){
       text-align: center;
     }
-    @media(min-width:768px){
+    @media(min-width:992px){
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -21,13 +21,13 @@
     text-align: left;
     margin-bottom: 10px;
     width: 100%;
-    @media(min-width:768px){
+    @media(min-width:992px){
       width: 50%;
     }
     &-row{
       display: flex;
       flex-wrap: wrap;
-      @media(min-width:768px){
+      @media(min-width:992px){
         margin-right: 80px;
       }
       .btn{
@@ -37,7 +37,7 @@
         text-align: left;
         overflow: visible;
         display: block;
-        @media(max-width:767px){
+        @media(max-width:991px){
           margin-top: 1rem;
           margin-left: auto;
           margin-right: auto;
@@ -93,32 +93,32 @@
     }
   }
   &__first{
-    @media(max-width:767px){
+    @media(max-width:991px){
       margin-bottom: 30px;
     }
-    @media(min-width:768px){
+    @media(min-width:992px){
       width: 225px;
       margin-right: 50px;
     }
   }
   &__second{
-    @media(max-width:767px){
+    @media(max-width:991px){
       margin-bottom: 30px;
     }
-    @media(min-width:768px){
+    @media(min-width:992px){
       margin-right: 70px;
     }
   }
   &__bottom{
     padding-bottom: 15px;
     padding-top: 30px;
-    @media(max-width:767px){
+    @media(max-width:991px){
       text-align: center;
       div{
         padding-bottom: 10px;
       }
     }
-    @media(min-width:768px){
+    @media(min-width:992px){
       display: flex;
       justify-content: space-between;
     }
@@ -127,7 +127,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    @media(min-width:768px){
+    @media(min-width:992px){
       justify-content: space-between;
     }
     svg{
@@ -135,7 +135,7 @@
     }
   }
   .btn-white{
-    @media(max-width:767px){
+    @media(max-width:991px){
       padding: 10px 30px;
     }
   }

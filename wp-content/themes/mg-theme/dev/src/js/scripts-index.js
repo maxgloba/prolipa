@@ -36,7 +36,7 @@ $(document).ready(function(){
       nextArrow: '<button type="button" class="slick-arrow slick-arrow__next"><svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.36841 1.84204L9.5263 9.99994L1.36841 18.1578" stroke="#8C7765" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
       responsive: [
         {
-          breakpoint: 1200,
+          breakpoint: 1500,
           settings: {
             slidesToShow: 3,
           }

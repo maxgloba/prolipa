@@ -16,6 +16,8 @@ section{
 .main-wrap{
   overflow: hidden;
   min-height: 100vh;
+  max-width: 100vw;
+  position: relative;
   &__bg{
     position: absolute;
     z-index: 1;
@@ -62,12 +64,14 @@ section{
   .container{
     position: relative;
     z-index: 2;
-    padding-top: res(70, 164);
-    // min-height: 100vh;
+    padding-top: res(70, 140);
     @media(min-width:768px){
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+    }
+    @media(min-width:1666px){
+      padding-top: 164px;
     }
   }
   &__list{
@@ -114,13 +118,16 @@ section{
       margin-bottom: 30px;
     }
     &__inner{
-      padding: res(10, 50) res(15, 66);
+      padding: res(10, 40) res(15, 50);
       border-radius: 30px 30px 0px 0px;
       background: #FFF;
       @media(min-width:768px){
         display: inline-flex;
         justify-content: space-between;
         align-items: flex-start;
+      }
+      @media(min-width:1666px){
+        padding: rem(50px) rem(66px);
       }
     }
     &__text{
@@ -164,8 +171,12 @@ section{
       position: absolute;
       left: 0;
       bottom: 0;
-      transform: translateX(-24%);
+      transform: translateX(-14%);
       width: 68%;
+    }
+    @media(min-width:1666px){
+      width: 68%;
+      transform: translateX(-24%);
     }
   }
   &__green{
@@ -175,7 +186,7 @@ section{
     height: 100%;
     z-index: 2;
     width: 50%;
-    @media(min-width:768px){
+    @media(min-width:1666px){
       width: 43%;
     }
   }
@@ -184,12 +195,12 @@ section{
     left: 50%;
     height: calc(100% - 90px);
     z-index: 1;
-    @media(max-width:767px){
+    @media(max-width:1665px){
       bottom: 0;
       width: 50%;
       height: auto;
     }
-    @media(min-width:768px){
+    @media(min-width:1666px){
       left: 43%;
       top: rem(90);
     }
@@ -227,7 +238,7 @@ section{
     overflow: hidden;
     @media(min-width:768px){
       width: calc(100% / 4);
-      padding: 120px 0 55px 50px;
+      padding: res(110, 120) 1rem res(30, 55) res(16, 50);
     }
     p{
       max-width: 268px;
@@ -243,6 +254,12 @@ section{
       display: block;
       position: absolute;
       top: 0; right: 0;
+      @media(min-width:768px){
+        width: 25%;
+      }
+      @media(min-width:1666px){
+        width: auto;
+      }
     }
     @media(max-width:767px){
       &:not(:first-child){
@@ -257,13 +274,13 @@ section{
         }
       }
       &:nth-child(2){
-        transform: translateY(-52px);
+        transform: translateY(res(-26, -52));
       }
       &:nth-child(3){
-        transform: translateY(-105px);
+        transform: translateY(res(-52, -105));
       }
       &:nth-child(4){
-        transform: translateY(-205px);
+        transform: translateY(res(-102, -205));
       }
     }
     &:nth-child(4){
@@ -298,7 +315,7 @@ section{
     font-weight: 400;
     line-height: 1.58;
     padding: res(30, 58);
-    @media(min-width:768px){
+    @media(min-width:1200px){
       width: 64.7%;
     }
     &:before{
@@ -339,7 +356,7 @@ section{
   &__bottom{
     position: relative;
     // margin-top: 30px;
-    @media(min-width:768px){
+    @media(min-width:1200px){
       display: flex;
       justify-content: space-between;
       margin-top: -10px;
@@ -473,19 +490,23 @@ section{
     flex-wrap: wrap;
     width: 100%;
     margin-bottom: 10px;
-    @media(min-width:768px){
+    @media(min-width:1200px){
       width: calc(50% - 12px);
+    }
+    @media(min-width:1666px){
       padding: 27px 20px 10px;
     }
     &__left{
       width: 100%;
-      @media(min-width:768px){
+      margin-bottom: 16px;
+      @media(min-width:1666px){
         width: 62%;
+        margin-bottom: 0;
       }
     }
     &__info{
       width: 100%;
-      @media(min-width:768px){
+      @media(min-width:1666px){
         width: 38%;
         padding-left: 40px;
       }
@@ -638,9 +659,22 @@ section{
   &__img{
     @media(min-width:768px){
       position: absolute;
-      top: 5px;
-      left: 50%;
+      top: 20%;
+      left: 48%;
       transform: translate(-40%, 0);
+    }
+    @media(min-width:992px){
+      width: 350px;
+      left: 52%;
+    }
+    @media(min-width:1200px){
+      width: 300px;
+      left: 48%;
+    }
+    @media(min-width:1666px){
+      width: 568px;
+      left: 50%;
+      top: 5px;
     }
     &-sign{
       display: flex;
@@ -688,6 +722,9 @@ section{
     @media(min-width:768px){
       margin-left: auto;
       display: inline-block;
+      width: rem(250);
+    }
+    @media(min-width:1666px){
       width: rem(540);
     }
     p{
@@ -968,8 +1005,15 @@ section{
         width: 25%;
         bottom: 0;
       }
-      @media(min-width:768px){
+      @media(max-width:1665px){
+        height: 60%;
+        width: auto;
+        bottom: 0;
+      }
+      @media(min-width:1666px){
         top: 5px;
+        height: 100%;
+        width: auto;
       }
     }
   }
@@ -1021,6 +1065,11 @@ section{
       flex-wrap: wrap;
       margin-top: -160px;
       margin-bottom: 68px;
+    }
+  }
+  .section-titles{
+    @media(min-width:768px){
+      max-width: 75%;
     }
   }
   &__item{
@@ -1103,6 +1152,7 @@ section{
         position: absolute;
         right: 97px;
         top: -31px;
+        width: 43%;
       }
     }
   }
@@ -1174,11 +1224,22 @@ $quality_left: calc((100vw - 1654px + 32px) / 2  + 1070px);
     background: #563D25;
     color: #fff;
     padding: 85px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
     padding-bottom: 240px;
-    position: absolute;
-    left: $quality_left;
-    right: 0;
-    top: 0;
+    @media(min-width:992px){
+      width: calc(960px / 2);
+    }
+    @media(min-width:1200px){
+      width: calc(1168px / 2);
+    }
+    @media(min-width:1666px){
+      position: absolute;
+      left: $quality_left;
+      right: 0;
+      top: 0;
+    }
   }
   &__img{
     &-brown{
@@ -1342,9 +1403,14 @@ $quality_left: calc((100vw - 1654px + 32px) / 2  + 1070px);
   &__reserved{
     @media(min-width:768px){
       position: absolute;
-      bottom: 0;
-      left: 100%;
+      width: 50%;
+      left: 55%;
+      top: -20px;
+    }
+    @media(min-width:1666px){
+      left: 100%; bottom: 0;
       transform: translateX(-46%);
+      width: auto;
     }
   }
   &__form{

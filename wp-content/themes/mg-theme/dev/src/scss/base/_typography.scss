@@ -25,32 +25,50 @@ h1, h2, h3, h4, h5, h6{
 }
 
 h1{
-  font-size: clamp(32px, cqi(48), 48px);
+  font-size: 32px;
   font-style: normal;
   font-weight: 600;
   line-height: 1.25;
   @media(min-width:768px){
     font-weight: 700;
   }
+  @media(min-width:1200px){
+    font-size: 36px;
+  }
+  @media(min-width:1666px){
+    font-size: 48px;
+  }
 }
 
 h2{
-  font-size: clamp(28px, cqi(40), 40px);
+  font-size: 28px;
   font-weight: 500;
   line-height: 1.2;
   text-transform: uppercase;
   @media(min-width:768px){
     font-weight: 700;
   }
+  @media(min-width:1200px){
+    font-size: 34px;
+  }
+  @media(min-width:1666px){
+    font-size: 40px;
+  }
 }
 
 h3{
-  font-size: clamp(24px, cqi(32), 32px);
+  font-size: 24px;
   font-weight: 500;
   line-height: 1.25;
   text-transform: uppercase;
   @media(min-width:768px){
     font-weight: 700;
+  }
+  @media(min-width:1200px){
+    font-size: 28px;
+  }
+  @media(min-width:1666px){
+    font-size: 32px;
   }
 }
 

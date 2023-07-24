@@ -5,7 +5,7 @@
   left: 0; right: 0;
   top: 0;
   transition: background .5s ease;
-  @media(max-width:767px){
+  @media(max-width:1666px){
     background: #fff;
   }
   &__row{
@@ -20,24 +20,32 @@
     line-height: 1.5;
     display: flex;
     margin-left: clamp(15px, cqi(42), 42px);
-    @media(max-width:767px){
+    @media(max-width:1199px){
       display: none;
     }
     svg{
       margin-right: rem(10);
+      @media(max-width:1665px){
+        path{ fill: #388B2A; }
+      }
     }
     &-sm{
       font-size: rem(12);
     }
   }
   &__white{
-    color: #FFF;
+    @media(min-width:1666px){
+      color: #FFF;
+    }
   }
   &__slogan{
     @media(max-width:767px){
       display: none;
     }
-    @media(min-width:768px){
+    @media(min-width:1200px){
+      margin-right: 30px;
+    }
+    @media(min-width:1666px){
       margin-right: clamp(100px, cqi(255), 255px);
     }
   }
@@ -67,7 +75,7 @@
     }
   }
   .btn-white{
-    @media(max-width:767px){
+    @media(max-width:1665px){
       display: none;
     }
   }
