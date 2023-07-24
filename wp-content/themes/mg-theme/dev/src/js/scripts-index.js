@@ -34,6 +34,26 @@ $(document).ready(function(){
       slidesToScroll: 1,
       prevArrow: '<button type="button" class="slick-arrow slick-arrow__prev"><svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.63159 18.158L1.4737 10.0001L9.63159 1.84217" stroke="#8C7765" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
       nextArrow: '<button type="button" class="slick-arrow slick-arrow__next"><svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.36841 1.84204L9.5263 9.99994L1.36841 18.1578" stroke="#8C7765" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 3,
+          }
+        },
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 2,
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+          }
+        }
+      ]
     });
   });
 
@@ -43,6 +63,26 @@ $(document).ready(function(){
       slidesToScroll: 1,
       prevArrow: '<button type="button" class="slick-arrow slick-arrow__prev"><svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.63159 18.158L1.4737 10.0001L9.63159 1.84217" stroke="#8C7765" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
       nextArrow: '<button type="button" class="slick-arrow slick-arrow__next"><svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.36841 1.84204L9.5263 9.99994L1.36841 18.1578" stroke="#8C7765" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 3,
+          }
+        },
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 2,
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+          }
+        }
+      ]
     });
   });
 });
@@ -56,6 +96,10 @@ catalogNav.forEach(item => {
     catalogTabs.forEach(el => el.classList.remove('active'))
     document.querySelector(`.catalog__tab-${e.target.dataset.tab}`).classList.add('active')
     e.target.classList.add('active')
+
+    $('.product__slider').each(function(index, slider){
+      $(this).slick('refresh');
+    })
   })
 })
 

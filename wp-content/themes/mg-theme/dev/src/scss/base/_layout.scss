@@ -3,12 +3,21 @@ html{
 }
 
 .container{
-  width: rem(1654);
+  width: 100%;
   max-width: 100%;
   padding-left: 1rem;
   padding-right: 1rem;
   margin-left: auto;
   margin-right: auto;
+  @media(min-width:992px){
+    width: rem(960);
+  }
+  @media(min-width:1200px){
+    width: rem(1168);
+  }
+  @media(min-width:1666px){
+    width: rem(1654);
+  }
 }
 
 img{

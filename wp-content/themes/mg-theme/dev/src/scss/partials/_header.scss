@@ -5,11 +5,14 @@
   left: 0; right: 0;
   top: 0;
   transition: background .5s ease;
+  @media(max-width:767px){
+    background: #fff;
+  }
   &__row{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: rem(89);
+    padding: res(10, 17.5) 0;
   }
   &__info{
     font-size: rem(14);
@@ -17,6 +20,9 @@
     line-height: 1.5;
     display: flex;
     margin-left: clamp(15px, cqi(42), 42px);
+    @media(max-width:767px){
+      display: none;
+    }
     svg{
       margin-right: rem(10);
     }
@@ -28,11 +34,24 @@
     color: #FFF;
   }
   &__slogan{
-    margin-right: clamp(100px, cqi(255), 255px);
+    @media(max-width:767px){
+      display: none;
+    }
+    @media(min-width:768px){
+      margin-right: clamp(100px, cqi(255), 255px);
+    }
   }
   .logo{
     display: block;
-    margin-right: clamp(10px, cqi(22), 22px);
+    width: res(80, 151);
+    @media(min-width:768px){
+      margin-right: clamp(10px, cqi(22), 22px);
+    }
+    svg{
+      display: block;
+      width: 100%;
+      height: auto;
+    }
   }
   .btn__phone{
     margin-left: auto;
@@ -45,6 +64,11 @@
       svg path{
         fill: #388B2A;
       }
+    }
+  }
+  .btn-white{
+    @media(max-width:767px){
+      display: none;
     }
   }
 }

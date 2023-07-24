@@ -5,7 +5,6 @@
 get_header(); ?>
 
 <main class="main-wrap">
-  <!-- <img class="pp" src="<?php echo ROOT; ?>/pp/main.jpg" /> -->
 
   <img class="main-wrap__bg" src="<?php echo IMG; ?>/body-bg.png" />
 
@@ -259,17 +258,16 @@ get_header(); ?>
           </div>
         </div>
         <?php endif; ?>
-
-        <div class="quality__brown">
-          <img class="quality__img-brown" src="<?php echo IMG; ?>/quality-brown.png" >
-          <img class="quality__img-letter" src="<?php echo IMG; ?>/quality-letter.png" >
-          <div class="quality__info">
-            <p><b><?php the_field('quality_pretenzia'); ?> <a href="mailto:<?php the_field('email', 'option'); ?>"><?php the_field('email', 'option'); ?></a>.</b></p>
-            <div class="quality__info-box">
-              <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23 40C32.3888 40 40 32.3888 40 23C40 13.6112 32.3888 6 23 6C13.6112 6 6 13.6112 6 23C6 32.3888 13.6112 40 23 40Z" stroke="white" stroke-width="2" stroke-miterlimit="10"/><path d="M23 45C35.1503 45 45 35.1503 45 23C45 10.8497 35.1503 1 23 1C10.8497 1 1 10.8497 1 23C1 35.1503 10.8497 45 23 45Z" stroke="white" stroke-width="2" stroke-miterlimit="10"/><path d="M23 17V23L30 30" stroke="white" stroke-width="2" stroke-miterlimit="10"/><path d="M23 8V12" stroke="white" stroke-width="2" stroke-miterlimit="10"/><path d="M23 34V38" stroke="white" stroke-width="2" stroke-miterlimit="10"/><path d="M8 23H12" stroke="white" stroke-width="2" stroke-miterlimit="10"/><path d="M34 23H38" stroke="white" stroke-width="2" stroke-miterlimit="10"/></svg>
-              Реакция на <br> обращение - от 1 часа.
-            </div>
-          </div>
+      </div>
+    </div>
+    <div class="quality__brown">
+      <img class="quality__img-brown" src="<?php echo IMG; ?>/quality-brown.png" >
+      <img class="quality__img-letter" src="<?php echo IMG; ?>/quality-letter.png" >
+      <div class="quality__info">
+        <p><b><?php the_field('quality_pretenzia'); ?> <a href="mailto:<?php the_field('email', 'option'); ?>"><?php the_field('email', 'option'); ?></a>.</b></p>
+        <div class="quality__info-box">
+          <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23 40C32.3888 40 40 32.3888 40 23C40 13.6112 32.3888 6 23 6C13.6112 6 6 13.6112 6 23C6 32.3888 13.6112 40 23 40Z" stroke="white" stroke-width="2" stroke-miterlimit="10"/><path d="M23 45C35.1503 45 45 35.1503 45 23C45 10.8497 35.1503 1 23 1C10.8497 1 1 10.8497 1 23C1 35.1503 10.8497 45 23 45Z" stroke="white" stroke-width="2" stroke-miterlimit="10"/><path d="M23 17V23L30 30" stroke="white" stroke-width="2" stroke-miterlimit="10"/><path d="M23 8V12" stroke="white" stroke-width="2" stroke-miterlimit="10"/><path d="M23 34V38" stroke="white" stroke-width="2" stroke-miterlimit="10"/><path d="M8 23H12" stroke="white" stroke-width="2" stroke-miterlimit="10"/><path d="M34 23H38" stroke="white" stroke-width="2" stroke-miterlimit="10"/></svg>
+          Реакция на <br> обращение - от 1 часа.
         </div>
       </div>
     </div>
