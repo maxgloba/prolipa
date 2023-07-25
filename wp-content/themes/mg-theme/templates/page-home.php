@@ -310,10 +310,7 @@ get_header(); ?>
     <div class="modal__wrap">
       <img class="modal__img" src="<?php echo IMG; ?>/products-drova.png" />
       <svg class="modal__close modalClose" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M18 18L6 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 6L6 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <div class="form__wrap">
-        <h6><?php the_field('products_titleform'); ?></h6>
-        <?php get_template_part( 'partials/block', 'form' ); ?>
-      </div>
+      <?php get_template_part( 'partials/block', 'form' ); ?>
     </div>
   </section>
 
