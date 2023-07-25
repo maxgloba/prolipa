@@ -115,6 +115,36 @@ otherNav.forEach(item => {
   })
 })
 
+const disableScroll = () => {
+  scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+  window.onscroll = function() {
+    window.scrollTo(scrollLeft, scrollTop);
+  }
+}
+
+const enableScroll = () => {
+  window.onscroll = function() {}
+}
+
+const modalOpen = document.querySelectorAll('.modalOpen')
+modalOpen.forEach(el => {
+  el.addEventListener('click', e => {
+    e.preventDefault()
+    disableScroll()
+    document.querySelector('.modal').classList.add('active')
+  })
+})
+
+const modalClose = document.querySelectorAll('.modalClose')
+modalClose.forEach(el => {
+  el.addEventListener('click', e => {
+    e.preventDefault()
+    enableScroll()
+    document.querySelector('.modal').classList.remove('active')
+  })
+})
+
 // setTimeout(()=>{
 //   document.querySelector('.catalog__tabs').style.minHeight = document.querySelector('.catalog__tab.active').clientHeight+'px'
 // }, 500);

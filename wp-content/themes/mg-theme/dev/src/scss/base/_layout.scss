@@ -36,3 +36,10 @@ img{
   height: auto;
   max-width: none;
 }
+
+.page-template-page-thanks, .error404{
+  .main-header,
+  .main-footer{
+    display: none;
+  }
+}

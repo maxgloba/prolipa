@@ -1,5 +1,5 @@
 <?php
-//	Template Name: Страница благодарности
+	// Template Name: Страница благодарности
 ?>
 
 <?php
