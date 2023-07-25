@@ -295,7 +295,7 @@ get_header(); ?>
           </div>
           <div class="products__yellow">
             <h4><?php the_field('products_title2'); ?></h4>
-            <a href="#">прямо сейчас</a>
+            <a class="modalOpen">прямо сейчас</a>
             <img class="products__reserved" src="<?php echo IMG; ?>/reserved.png" />
           </div>
         </div>
