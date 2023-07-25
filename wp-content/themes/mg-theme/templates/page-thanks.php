@@ -278,11 +278,12 @@ if(!empty($telegram)){
 
 //	Дизайн страницы благодарности
 //	====================
-if (!empty($basket)) {
-	get_template_part('template-parts/thanks');
-} else {
-	get_template_part('template-parts/thanks');
-}
+
+	if (!empty($basket)) {
+		get_template_part( 'partials/block', 'thanks' );
+	} else {
+		get_template_part( 'partials/block', 'thanks' );
+	}
 
 //	Провал проверки антибот
 	} else {
