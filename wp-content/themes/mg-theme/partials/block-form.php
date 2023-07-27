@@ -1,10 +1,10 @@
 <div class="form__wrap">
   <h6><?php the_field('products_titleform'); ?></h6>
-  <form class="form formAction form_block" method="POST" enctype="multipart/form-data" action="<?php echo !empty($formUrl) ? $formUrl : get_page_link(get_page_by_title('Страница благодарности'));?>">
+  <form class="form formAction form_block" method="POST" enctype="multipart/form-data" action="<?php the_permalink(119); ?>">
     <input type="hidden" name="url" value="<?php echo $current_url; ?>">
     <div class="field">
-      <label for="name">Ваше имя</label>
-      <input type="text" name="name" id="name" placeholder="Например Иван" required />
+      <label for="name1">Ваше имя</label>
+      <input type="text" name="name1" id="name1" placeholder="Например Иван" required />
     </div>
     <div class="field">
       <label for="name">Ваш номер</label>

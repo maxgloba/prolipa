@@ -416,7 +416,7 @@ section{
 }
 
 .catalog{
-  background: url(../img/catalog-bg.png) no-repeat left bottom;
+  background: url(../img/catalog-bg.png) no-repeat left bottom/cover;
   padding-top: res(50, 100);
   padding-bottom: res(50, 125);
   .section-titles{
@@ -1235,6 +1235,9 @@ $quality_left: calc((100vw - 1654px + 32px) / 2  + 1070px);
     @media(max-width:767px){
       margin-bottom: 60px;
     }
+    @media(min-width:768px){
+      width: rem(500);
+    }
     @media(min-width:992px){
       width: calc(960px / 2);
       padding: 85px;
@@ -1245,7 +1248,7 @@ $quality_left: calc((100vw - 1654px + 32px) / 2  + 1070px);
     @media(min-width:1666px){
       position: absolute;
       left: $quality_left;
-      right: 0;
+      // right: 0;
       top: 0;
     }
   }

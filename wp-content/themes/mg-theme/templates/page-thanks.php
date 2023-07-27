@@ -1,11 +1,13 @@
 <?php
 	// Template Name: Страница благодарности
+get_header();
 ?>
 
 <?php
 //	Проверка формы
 //	====================
-	if ( (!$_POST) || ($_POST['e-mail']) ) {
+	// if ( (!$_POST) || ($_POST['e-mail']) ) {
+	if ( (!$_POST) ) {
 		get_template_part('404');
 
 //	Проверка антибот
@@ -132,6 +134,7 @@ if ($user)				$mess .='<tr><td>Детали			</td><td>'.$user.' - '.$captcha.'<
 						$mess .='</body>';
 
 //	Добавление файлов к письму
+
 $attachments = array();
 $file_mime_arr_option = get_field('file-mime' , 'option');
 if( is_array( $file_mime_arr_option ) ){
@@ -268,10 +271,10 @@ endwhile;
 
 // Отправка сообщения в Telegram
 //	====================
-$telegram = array_filter(get_field('telegram','option'));
-if(!empty($telegram)){
-	require_once( __DIR__ . '/../template-parts/order-telegram/form2telegram_hook.php');
-}
+// $telegram = array_filter(get_field('telegram','option'));
+// if(!empty($telegram)){
+// 	require_once( __DIR__ . '/../template-parts/order-telegram/form2telegram_hook.php');
+// }
 
 //	Пересчет номера заявки 
 	getNumber();
@@ -290,3 +293,5 @@ if(!empty($telegram)){
 		get_template_part('404');
 	}
 ?>
+
+<?php get_footer(); ?>
