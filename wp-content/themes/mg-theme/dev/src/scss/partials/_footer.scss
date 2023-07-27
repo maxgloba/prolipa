@@ -4,31 +4,50 @@
     padding-top: 30px;
     border-top: 1px solid #E7E7E7;
     border-bottom: 1px solid #E7E7E7;
-    @media(max-width:991px){
-      text-align: center;
-    }
     @media(min-width:992px){
       display: flex;
       justify-content: space-between;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 30px;
+    }
+    @media(min-width:1666px){
       align-items: center;
+      flex-direction: row;
+    }
+  }
+  &__inner {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 10px;
+    @media(min-width:768px){
+      flex-direction: row;
     }
   }
   &__info{
     font-size: rem(14);
     font-weight: 400;
     line-height: 1.5;
+    // width: 100%;
     display: flex;
-    text-align: left;
     margin-bottom: 10px;
-    width: 100%;
+    margin-right: 10px;
     @media(min-width:992px){
       width: 50%;
+      margin-right: 0px;
     }
     &-row{
+      width: 100%;
       display: flex;
       flex-wrap: wrap;
-      @media(min-width:992px){
-        margin-right: 80px;
+      flex-direction: column;
+      @media(min-width:768px){
+        flex-direction: row;
+        max-width: 560px;
+        // margin-right: 60px;
       }
       .btn{
         width: 270px;
@@ -59,6 +78,15 @@
     }
     &-sm{
       font-size: rem(12);
+    }
+  }
+  &__contact {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    @media(min-width:768px){
+     width: 170px;
     }
   }
   &__slogan{}
@@ -93,20 +121,20 @@
     }
   }
   &__first{
-    @media(max-width:991px){
-      margin-bottom: 30px;
-    }
-    @media(min-width:992px){
-      width: 225px;
+    @media(min-width:768px){
+      width: 260px;
       margin-right: 50px;
+    }
+    @media(max-width:991px){
+      margin-bottom: 20px;
     }
   }
   &__second{
     @media(max-width:991px){
       margin-bottom: 30px;
     }
-    @media(min-width:992px){
-      margin-right: 70px;
+    @media(min-width:1666px){
+      margin-right: 60px;
     }
   }
   &__bottom{
@@ -135,8 +163,6 @@
     }
   }
   .btn-white{
-    @media(max-width:991px){
-      padding: 10px 30px;
-    }
+    padding: 12px 20px;
   }
 }

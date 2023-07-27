@@ -883,6 +883,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 })();
 
+
 $(document).ready(function(){
   const sliderBtnLeft = '<svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 11L1 6L6 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
   const sliderBtnRight = '<svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L6 6L1 11" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
@@ -946,7 +947,7 @@ $(document).ready(function(){
         {
           breakpoint: 1200,
           settings: {
-            slidesToShow: 3,
+            slidesToShow: 5,
           }
         },
         {
@@ -965,6 +966,8 @@ $(document).ready(function(){
     });
   });
 });
+
+console.log(111);
 
 const catalogNav = document.querySelectorAll('.catalog__nav-item')
 const catalogTabs = document.querySelectorAll('.catalog__tab')

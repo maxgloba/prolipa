@@ -1,22 +1,26 @@
 <footer class="main-footer">
   <div class="container">
     <div class="main-footer__row">
-      <div class="main-footer__first">
-        <a href="<?php echo home_url(); ?>" class="logo"><?php the_field('logo', 'option'); ?></a>
-        <div class="main-footer__slogan"><?php the_field('footer_slogan', 'option'); ?></div>
+
+      <div class="main-footer__inner">
+        <div class="main-footer__first">
+          <a href="<?php echo home_url(); ?>" class="logo"><?php the_field('logo', 'option'); ?></a>
+          <div class="main-footer__slogan"><?php the_field('footer_slogan', 'option'); ?></div>
+        </div>
+
+        <?php if( have_rows('footer_osnovanie', 'option') ): ?>
+        <div class="main-footer__second">
+          <p><b>На основании:</b></p>
+          <ul>
+            <?php while( have_rows('footer_osnovanie', 'option') ): the_row(); ?>
+              <li><?php the_sub_field('text'); ?></li>
+            <?php endwhile; ?>
+          </ul>
+        </div>
+        <?php endif; ?>
       </div>
 
-      <?php if( have_rows('footer_osnovanie', 'option') ): ?>
-      <div class="main-footer__second">
-        <p><b>На основании:</b></p>
-        <ul>
-          <?php while( have_rows('footer_osnovanie', 'option') ): the_row(); ?>
-            <li><?php the_sub_field('text'); ?></li>
-          <?php endwhile; ?>
-        </ul>
-      </div>
-    <?php endif; ?>
-
+      <div class="main-footer__inner">
       <?php if( have_rows('info', 'option') ): ?>
       <div class="main-footer__info-row">
         <?php while( have_rows('info', 'option') ): the_row(); ?>
@@ -34,10 +38,12 @@
       </div>
       <?php endif; ?>
 
-      <div>
+      <div class="main-footer__contact">
         <a href="tel:<?php the_field('phone', 'option'); ?>" class="btn__phone"><span><?php the_field('phone', 'option'); ?></span></a>
         <button class="btn btn-white"><span>Заказать звонок</span></button>
       </div>
+      </div>
+    
     </div>
     <div class="main-footer__bottom">
       <div><?php the_field('copyright', 'option'); ?></div>
