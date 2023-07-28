@@ -29,7 +29,7 @@ section{
 .section-titles{
   position: relative;
   padding-left: res(20, 40);
-  margin-bottom: res(62, 77);
+  margin-bottom: res(80, 77);
   z-index: 4;
   &:before{
     content: "";
@@ -123,6 +123,7 @@ section{
         display: inline-flex;
         justify-content: space-between;
         align-items: flex-start;
+        gap: 20px;
       }
       @media(min-width:1666px){
         padding: rem(50px) rem(66px);
@@ -216,6 +217,9 @@ section{
     transform: translate(-50%, -50%);
     z-index: 2;
     mix-blend-mode: soft-light;
+    @media(min-width:1666px){
+      top: 33%;
+    }
   }
   &__doska{
     position: absolute;
@@ -247,6 +251,7 @@ section{
     p{
       position: relative;
       max-width: 268px;
+      font-weight: 600;
       z-index: 5;
       span{
         color: #388B2A;
@@ -254,6 +259,8 @@ section{
     }
     p + p{
       font-size: 14px;
+      font-weight: 400;
+      max-width: 236px;
       margin-top: 20px;
     }
     img{
@@ -285,13 +292,13 @@ section{
         }
       }
       &:nth-child(2){
-        transform: translateY(res(-26, -52));
+        transform: translateY(res(-40, -52));
       }
       &:nth-child(3){
-        transform: translateY(res(-52, -105));
+        transform: translateY(res(-70, -105));
       }
       &:nth-child(4){
-        transform: translateY(res(-102, -205));
+        transform: translateY(res(-160, -205));
       }
     }
     &:nth-child(4){
@@ -417,6 +424,7 @@ section{
 
 .catalog{
   background: url(../img/catalog-bg.png) no-repeat left bottom/cover;
+  background-size: 900px 100%;
   padding-top: res(50, 100);
   padding-bottom: res(50, 125);
   .section-titles{
@@ -498,6 +506,7 @@ section{
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
     flex-wrap: wrap;
     width: 100%;
     margin-bottom: 10px;
@@ -565,11 +574,17 @@ section{
         opacity: 1;
       }
     }
+    h4, h5 {
+      font-family: 'Roboto', sans-serif;
+      text-transform: none;
+    }
     h4{
       margin-bottom: 17px;
+      font-size: 20px;
     }
     h5{
       margin-bottom: 15px;
+      font-size: 18px;
     }
     &__sort{
       margin-bottom: 15px;
@@ -597,6 +612,7 @@ section{
       margin-bottom: 22px;
       font-size: 14px;
       display: flex;
+      align-items: center;
       span{
         font-size: 20px;
         font-weight: 700;
@@ -622,7 +638,7 @@ section{
   &__wrap{
     position: relative;
     border-radius: 10px;
-    background: #FCFAD6;
+    background-color: #FCFAD6;
     font-size: res(16, 24);
     font-weight: 400;
     line-height: 1.58;
@@ -637,8 +653,8 @@ section{
     }
     &:before{
       content: "";
-      mix-blend-mode: lighten;
-      background: url(../img/about-brown.png) no-repeat 0 0/cover;
+      mix-blend-mode: difference;
+      background: url(../img/zakaz-bg.png) no-repeat 0 0/cover;
       display: block;
       position: absolute;
       left: 0;
@@ -668,6 +684,8 @@ section{
     }
   }
   &__img{
+    position: relative;
+    z-index: 2;
     @media(min-width:768px){
       width: 39.5%;
       position: absolute;
@@ -680,7 +698,6 @@ section{
       align-items: flex-start;
       padding: 7px 20px 7px 64px;
       border-radius: 10px;
-      border: 2px dashed rgba(13,13,13,0.2);
       background: #FFF;
       font-size: 15px;
       width: 100%;
@@ -717,6 +734,7 @@ section{
     display: inline-block;
     padding: res(10, 30) res(10, 30) res(10, 30) res(10, 106);
     border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
     border: 1px dashed #563D25;
     width: 100%;
     margin-top: 30px;
@@ -726,11 +744,10 @@ section{
       width: 33%;
     }
     p{
-      font-size: res(16, 30);
+      font-size: res(16, 26);
       line-height: 1.26;
       margin-bottom: res(16, 28);
       & + p{
-        margin-bottom: 0;
         font-size: res(13, 18);
         line-height: 1.44;
         span{
@@ -778,7 +795,8 @@ section{
   }
   &__svg{
     position: absolute;
-    right: 0; top: 0;
+    right: 0; 
+    top: 40px;
     transform: translate(50%, -50%);
   }
   &__katalog{
@@ -1017,12 +1035,16 @@ section{
   }
   &__right{
     background: #FCFAD6;
+    &:before{
+      mix-blend-mode: difference;
+    }
     @media(max-width:767px){
       padding: 2rem 1rem;
       text-align: center;
     }
     img{
       display: block;
+      z-index: 2;
       @media(max-width:767px){
         width: 250px;
         margin-left: auto;
@@ -1040,6 +1062,7 @@ section{
         position: absolute;
         right: 70px;
         bottom: 58px;
+        z-index: 3;
       }
     }
   }
@@ -1163,7 +1186,7 @@ $quality_left: calc((100vw - 1654px + 32px) / 2  + 1070px);
   background: url(../img/quality-bg.png) no-repeat 0 0/100% 100%;
   position: relative;
   @media(min-width:768px){
-    background-size: 60% 100%;
+    background-size: 64% 100%;
   }
   .container{
     position: relative;
@@ -1254,6 +1277,10 @@ $quality_left: calc((100vw - 1654px + 32px) / 2  + 1070px);
   }
   &__img{
     &-brown{
+      @media(min-width:1666px){
+        height: 560px;
+        background: rgba(86, 61, 37, 1);
+      }
       position: absolute;
       left: 0;
       top: 0;
@@ -1265,12 +1292,14 @@ $quality_left: calc((100vw - 1654px + 32px) / 2  + 1070px);
       left: 0;
       bottom: -106px;
       @media(min-width:1666px){
-        bottom: -200px;
+        bottom: -290px;
       }
     }
   }
   &__info{
     max-width: 465px;
+    position: relative;
+    z-index: 2;
     p{
       margin-bottom: 30px;
     }
