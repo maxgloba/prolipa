@@ -171,7 +171,7 @@ get_header(); ?>
       <?php if( have_rows('other_tabs') ): $a=0; $i=0; ?>
       <div class="other__nav">
         <?php while( have_rows('other_tabs') ): the_row(); $a++; ?>
-          <button class="other__btn <?php if($a===1){echo 'active';} ?> modalOpen" data-tab="<?php echo $a; ?>"><?php the_sub_field('nav'); ?></button>
+          <button class="other__btn <?php if($a===1){echo 'active';} ?>" data-tab="<?php echo $a; ?>"><?php the_sub_field('nav'); ?></button>
         <?php endwhile; ?>
       </div>
       <div class="other__wrap">
