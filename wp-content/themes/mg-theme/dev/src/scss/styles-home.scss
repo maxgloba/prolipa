@@ -29,7 +29,7 @@ section{
 .section-titles{
   position: relative;
   padding-left: res(20, 40);
-  margin-bottom: res(80, 77);
+  margin-bottom: res(50, 70);
   z-index: 4;
   &:before{
     content: "";
@@ -96,7 +96,7 @@ section{
     }
   }
   &__btn{
-    margin-bottom: res(60, 94);
+    margin-bottom: res(60, 100);
     @media(max-width:767px){
       .btn{
         display: block;
@@ -116,7 +116,7 @@ section{
       margin-top: 100px;
     }
     &__inner{
-      padding: res(10, 40) res(15, 50);
+      padding: res(10, 50) res(15, 50);
       border-radius: 30px 30px 0px 0px;
       background: #FFF;
       @media(min-width:768px){
@@ -126,11 +126,12 @@ section{
         gap: 20px;
       }
       @media(min-width:1666px){
-        padding: rem(50px) rem(66px);
+        padding: rem(48) rem(50);
       }
     }
     &__text{
       font-size: res(14, 18);
+      font-family: 'Roboto', sans-serif;
       font-weight: 600;
       line-height: 1.44;
       text-transform: uppercase;
@@ -155,17 +156,17 @@ section{
     }
     @media(min-width:768px){
       position: absolute;
-      left: 57%; 
+      left: 48%; 
       right: 1rem;
       top: 0;
       height: 100%;
       z-index: 1;
       min-height: 100%;
-      width: 50%;
+      width: 59%;
     }
     @media(min-width:1200px){
       left: 49%; 
-      height: 105%;
+      height: 100%;
       width: 58%;
     }
   }
@@ -206,7 +207,7 @@ section{
       height: auto;
     }
     @media(min-width:1666px){
-      left: 43%;
+      left: 42%;
       top: rem(90);
     }
   }
@@ -223,15 +224,18 @@ section{
   }
   &__doska{
     position: absolute;
-    bottom: -18%;
+    bottom: -14%;
     left: 11%;
     z-index: 4;
     width: 75%;
+    @media(min-width:768px){
+      bottom: -18%;
+    }
   }
 }
 
 .about{
-  padding-top: res(70, 210);
+  padding-top: clamp(4.375rem, 12.69649cqi, 13.125rem);
   padding-bottom: 50px;
   &__list{
     display: flex;
@@ -246,7 +250,7 @@ section{
     overflow: hidden;
     @media(min-width:768px){
       width: calc(100% / 4);
-      padding: res(110, 120) 1rem res(30, 55) res(16, 50);
+      padding: res(110, 140) 1rem res(30, 55) res(16, 46);
     }
     p{
       position: relative;
@@ -292,13 +296,13 @@ section{
         }
       }
       &:nth-child(2){
-        transform: translateY(res(-40, -52));
+        transform: translateY(res(-30, -60));
       }
       &:nth-child(3){
-        transform: translateY(res(-70, -105));
+        transform: translateY(res(-80, -110));
       }
       &:nth-child(4){
-        transform: translateY(res(-160, -205));
+        transform: translateY(res(-185, -210));
       }
     }
     &:nth-child(4){
@@ -396,11 +400,11 @@ section{
   &__sign{
     display: flex;
     align-items: flex-start;
-    padding: 9px 20px;
+    padding: 9px 21px;
     border-radius: 10px;
     border: 2px dashed rgba(13,13,13,0.2);
     background: #FFF;
-    font-size: res(14, 18);
+    font-size: res(14, 16);
     margin-top: 10px;
     @media(min-width:768px){
       margin-top: 0;
@@ -408,6 +412,9 @@ section{
       top: 75px;
       right: 230px;
       transform: translateX(170px);
+    }
+    @media(min-width:1666px){
+      right: 56px;
     }
     svg{
       width: 24px;
@@ -425,7 +432,7 @@ section{
 .catalog{
   background: url(../img/catalog-bg.png) no-repeat left bottom/cover;
   background-size: 900px 100%;
-  padding-top: res(50, 100);
+  padding-top: res(54, 101);
   padding-bottom: res(50, 125);
   .section-titles{
     margin-bottom: res(30, 56);
@@ -514,7 +521,7 @@ section{
       width: calc(50% - 12px);
     }
     @media(min-width:1666px){
-      padding: 27px 20px 10px;
+      padding: 26px 20px 10px;
     }
     &__left{
       width: 100%;
@@ -579,7 +586,7 @@ section{
       text-transform: none;
     }
     h4{
-      margin-bottom: 17px;
+      margin-bottom: 25px;
       font-size: 20px;
     }
     h5{
@@ -609,7 +616,7 @@ section{
     }
     &__price{
       margin-top: auto;
-      margin-bottom: 22px;
+      margin-bottom: 14px;
       font-size: 14px;
       display: flex;
       align-items: center;
@@ -666,6 +673,8 @@ section{
     }
   }
   &__info{
+    position: relative;
+    z-index: 3;
     @media(max-width:767px){
       margin-bottom: 16px;
       text-align: center;
@@ -712,6 +721,8 @@ section{
       }
       @media(min-width:992px){
         width: 263px;
+        top: 32px;
+        left: -9px;
       }
       span{
         color: #030303;
@@ -741,12 +752,14 @@ section{
     @media(min-width:768px){
       margin-left: auto;
       display: inline-block;
-      width: 33%;
+      width: 36%;
     }
     p{
       font-size: res(16, 26);
       line-height: 1.26;
-      margin-bottom: res(16, 28);
+      margin-bottom: res(16, 34);
+      position: relative;
+      z-index: 3;
       & + p{
         font-size: res(13, 18);
         line-height: 1.44;
@@ -959,6 +972,10 @@ section{
         transform: translateX(25%);
       }
     }
+    @media(min-width:1666px){
+      width: 64px;
+      height: 64px;
+    }
   }
   .slick-slide{
     padding-left: 15px;
@@ -1000,7 +1017,7 @@ section{
     font-size: res(18, 24);
     font-weight: 400;
     line-height: 1.58;
-    padding: res(30, 58) res(16, 58);
+    padding: res(30, 58) res(16, 56);
     margin-bottom: 30px;
     @media(min-width:768px){
       margin-bottom: 0;
@@ -1044,6 +1061,7 @@ section{
     }
     img{
       display: block;
+      position: relative;
       z-index: 2;
       @media(max-width:767px){
         width: 250px;
@@ -1060,7 +1078,7 @@ section{
     .btn{
       @media(min-width:768px){
         position: absolute;
-        right: 70px;
+        right: 89px;
         bottom: 58px;
         z-index: 3;
       }
@@ -1194,7 +1212,7 @@ $quality_left: calc((100vw - 1654px + 32px) / 2  + 1070px);
   }
   &__svg{
     display: block;
-    margin-top: res(-40, -66);
+    margin-top: res(-70, -76);
     @media(max-width:767px){
       width: 100%;
     }
@@ -1206,7 +1224,7 @@ $quality_left: calc((100vw - 1654px + 32px) / 2  + 1070px);
   }
   &__item{
     position: relative;
-    padding: res(70, 130) res(16, 30) res(16, 30);
+    padding: res(70, 116) res(16, 30) res(16, 30);
     font-size: res(13, 16);
     font-weight: 500;
     border: 1px solid rgba(0, 0, 0, 0.10);
@@ -1278,7 +1296,7 @@ $quality_left: calc((100vw - 1654px + 32px) / 2  + 1070px);
   &__img{
     &-brown{
       @media(min-width:1666px){
-        height: 560px;
+        height: 520px;
         background: rgba(86, 61, 37, 1);
       }
       position: absolute;
@@ -1307,7 +1325,7 @@ $quality_left: calc((100vw - 1654px + 32px) / 2  + 1070px);
       border-radius: 20px;
       border: 2px dashed #FFF;
       position: relative;
-      padding: 20px 20px 20px 84px;
+      padding: 20px 60px 20px 84px;
       display: inline-block;
       svg{
         display: block;
@@ -1320,7 +1338,7 @@ $quality_left: calc((100vw - 1654px + 32px) / 2  + 1070px);
     position: relative;
     @media(min-width:768px){
       margin-top: -200px;
-      padding-left: 276px;
+      padding-left: 280px;
       max-width: $quality_width;
     }
   }
@@ -1382,6 +1400,10 @@ $quality_left: calc((100vw - 1654px + 32px) / 2  + 1070px);
           transform: translateX(25%);
         }
       }
+      @media(min-width:1666px){
+        width: 64px;
+        height: 64px;
+      }
     }
     .slick-slide{
       padding-left: 15px;
@@ -1427,7 +1449,7 @@ $quality_left: calc((100vw - 1654px + 32px) / 2  + 1070px);
     min-height: 183px;
     border-radius: 20px;
     background: #FCFAD6;
-    padding: res(16, 33) res(16, 33) res(16, 21);
+    padding: res(16, 34) res(16, 34) res(16, 21);
     text-align: center;
     position: relative;
     @media(min-width:992px){
@@ -1436,13 +1458,13 @@ $quality_left: calc((100vw - 1654px + 32px) / 2  + 1070px);
     }
     h4{
       color: #563D25;
-      margin-bottom: 16px;
+      margin-bottom: 20px;
       text-align: left;
     }
     a{
       color: #388B2A;
       font-family: 'Akrobat', sans-serif;
-      font-size: res(18, 24);
+      font-size: res(18, 30);
       font-weight: 600;
       line-height: 1.3;
       text-transform: uppercase;
@@ -1456,12 +1478,12 @@ $quality_left: calc((100vw - 1654px + 32px) / 2  + 1070px);
     @media(min-width:768px){
       position: absolute;
       width: 50%;
-      left: 55%;
+      left: 50%;
       top: -60px;
     }
     @media(min-width:1666px){
-      left: 100%; 
-      top: -80px;
+      left: 92%;
+      top: -55px;
       transform: translateX(-30%);
       width: auto;
     }
@@ -1469,9 +1491,9 @@ $quality_left: calc((100vw - 1654px + 32px) / 2  + 1070px);
   &__drova{
     position: absolute;
     right: 0;
-    top: 50%;
+    top: 47%;
     transform: translateY(-50%);
-    max-width: 233px;
+    max-width: 266px;
     z-index: 3;
     @media(max-width:1500px){
       display: none;
@@ -1480,7 +1502,7 @@ $quality_left: calc((100vw - 1654px + 32px) / 2  + 1070px);
 }
 
 .field{
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   &-flex{
     display: flex;
   }
@@ -1527,10 +1549,10 @@ $quality_left: calc((100vw - 1654px + 32px) / 2  + 1070px);
     position: relative;
     z-index: 2;
     @media(min-width:768px){
-      max-width: 420px;
+      max-width: 410px;
     }
     @media(min-width:1500px){
-      margin-right: 140px;
+      margin-right: 180px;
     }
     h6{
       color: #000;

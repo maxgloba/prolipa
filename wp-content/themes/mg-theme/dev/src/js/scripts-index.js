@@ -88,8 +88,6 @@ $(document).ready(function(){
   });
 });
 
-console.log(111);
-
 const catalogNav = document.querySelectorAll('.catalog__nav-item')
 const catalogTabs = document.querySelectorAll('.catalog__tab')
 catalogNav.forEach(item => {
@@ -151,3 +149,8 @@ modalClose.forEach(el => {
 // setTimeout(()=>{
 //   document.querySelector('.catalog__tabs').style.minHeight = document.querySelector('.catalog__tab.active').clientHeight+'px'
 // }, 500);
+
+
+/* copyright */
+const year = new Date().getFullYear();
+document.getElementById('copyright').innerHTML =`Copyright © PROLIPA ${year}`;

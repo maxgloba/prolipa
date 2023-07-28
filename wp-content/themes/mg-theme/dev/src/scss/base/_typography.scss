@@ -10,8 +10,8 @@ body{
   line-height: 1.5;
 }
 
-//font-family: 'Akrobat', sans-serif; font-weight: 500;
 //font-family: 'Akrobat Light', sans-serif; font-weight: 400;
+//font-family: 'Akrobat', sans-serif; font-weight: 500;
 //font-family: 'Akrobat ExtraLight', sans-serif; font-weight: 300;
 //font-family: 'Akrobat SemiBold', sans-serif; font-weight: 600;
 //font-family: 'Akrobat Bold', sans-serif; font-weight: 700;
@@ -32,8 +32,11 @@ h1{
   @media(min-width:768px){
     font-weight: 700;
   }
+  @media(min-width:1200px){
+    font-size: 36px;
+  }
   @media(min-width:1666px){
-    font-size: 34px;
+    font-size: 48px;
   }
 }
 
@@ -46,7 +49,10 @@ h2{
     font-weight: 700;
   }
   @media(min-width:1200px){
-    font-size: 30px;
+    font-size: 32px;
+  }
+  @media(min-width:1666px){
+    font-size: 40px;
   }
 }
 
@@ -58,10 +64,16 @@ h3{
   @media(min-width:768px){
     font-weight: 700;
   }
+  @media(min-width:1200px){
+    font-size: 28px;
+  }
+  @media(min-width:1666px){
+    font-size: 32px;
+  }
 }
 
 h4{
-  font-size: clamp(20px, cqi(22), 22px);
+  font-size: clamp(20px, cqi(22), 24px);
   font-weight: 500;
   line-height: 1.3;
   text-transform: uppercase;
