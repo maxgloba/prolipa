@@ -5,7 +5,7 @@ $current_url = home_url( add_query_arg( array(), $wp->request ).'/' );
  */
 get_header(); ?>
 
-<img class="pp" src="<?php echo ROOT; ?>/pp/main.jpg" />
+<!-- <img class="pp" src="<?php echo ROOT; ?>/pp/main.jpg" /> -->
 
 <main class="main-wrap">
 

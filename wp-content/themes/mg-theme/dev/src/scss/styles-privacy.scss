@@ -1,0 +1,17 @@
+@import 'b2b/anim.css';
+@import 'b2b/base.min.css';
+@import 'b2b/blocks.css';
+@import 'b2b/modules.css';
+
+@import 'base/all';
+
+@import 'partials/header';
+@import 'partials/footer';
+
+
+.privacy{
+  padding-top: res(70, 140);
+  @media(min-width:1666px){
+    padding-top: 164px;
+  }
+}

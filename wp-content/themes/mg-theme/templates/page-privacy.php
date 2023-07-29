@@ -2,10 +2,10 @@
 <?php get_header(); ?>
 
 	<?php // для преобразования кириллических доменов ?>
-	<?php 
+	<?php
 	//require('functions/punycode.php');
 	include (locate_template('functions/idna_convert.class.php'));
-	
+
 	//кодер/декодер домена
 	function coderurl($url) {
 		$idn = new idna_convert(array('idn_version'=>2008));
@@ -20,7 +20,7 @@
 		$company_name = get_bloginfo('name');
 	}
 	?>
-	<section id="privacy">
+	<section id="privacy" class="privacy">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-s">

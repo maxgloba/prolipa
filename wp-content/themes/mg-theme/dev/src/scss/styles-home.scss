@@ -430,7 +430,7 @@ section{
 }
 
 .catalog{
-  background: url(../img/catalog-bg.png) no-repeat left bottom/cover;
+  background: url(../img/catalog-bg.png) no-repeat left bottom/50% 100%;
   background-size: 900px 100%;
   padding-top: res(54, 101);
   padding-bottom: res(50, 125);
@@ -763,6 +763,7 @@ section{
       & + p{
         font-size: res(13, 18);
         line-height: 1.44;
+        margin-bottom: 0;
         span{
           margin-left: 10px;
           border-radius: 10px;
@@ -1289,7 +1290,8 @@ $quality_left: calc((100vw - 1654px + 32px) / 2  + 1070px);
     @media(min-width:1666px){
       position: absolute;
       left: $quality_left;
-      // right: 0;
+      right: 0;
+      width: auto;
       top: 0;
     }
   }

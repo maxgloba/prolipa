@@ -57,3 +57,5 @@ node_modules/
 *.mp4
 *.zip
 *.rar
+
+/wp-content/themes/mg-theme/dev/gulpfile.js

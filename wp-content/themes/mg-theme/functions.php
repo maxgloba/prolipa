@@ -26,25 +26,16 @@ function front_scripts() {
 	// Thanks page
 	if( is_page_template( array( 'templates/page-thanks.php' ) ) ){
 		wp_enqueue_style( 'styles', get_template_directory_uri().'/css/styles-thanks.css');
-		// wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/scripts-thanks.js', false, false, 'in_footer');
 	}
 
-
-// Single page
-	// if( is_single() ){
-	// 	wp_enqueue_style( 'styles', get_template_directory_uri().'/css/styles-single.css');
-	// 	wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/scripts-single.js', false, false, 'in_footer');
-	// }
-
-	// if( is_page() ){
-	// 	wp_enqueue_style( 'styles', get_template_directory_uri().'/css/styles-page.css');
-	// 	wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/scripts-page.js', false, false, 'in_footer');
-	// }
+	// Privacy page
+	if( is_page_template( array( 'templates/page-privacy.php' ) ) ){
+		wp_enqueue_style( 'styles', get_template_directory_uri().'/css/styles-privacy.css');
+	}
 
 // 404 page
 	if( is_404() ){
 		wp_enqueue_style( 'styles', get_template_directory_uri().'/css/styles-404.css');
-		// wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/scripts-404.js', false, false, 'in_footer');
 	}
 
 }

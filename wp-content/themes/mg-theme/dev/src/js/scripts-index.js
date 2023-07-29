@@ -152,5 +152,5 @@ modalClose.forEach(el => {
 
 
 /* copyright */
-const year = new Date().getFullYear();
-document.getElementById('copyright').innerHTML =`Copyright © PROLIPA ${year}`;
+document.getElementById('copyrightYear').innerHTML = new Date().getFullYear();
+
