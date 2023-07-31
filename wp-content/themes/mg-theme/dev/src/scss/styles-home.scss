@@ -55,7 +55,7 @@ section{
 
 .banner{
   position: relative;
-  background: url(../img/banner-bg.png) no-repeat center top/cover;
+  background: url(../img/banner-bg.webp) no-repeat center top/cover;
   h1{
     margin-bottom: res(5, 15);
   }
@@ -343,7 +343,7 @@ section{
     &:before{
       content: "";
       mix-blend-mode: lighten;
-      background: url(../img/about-brown.png) no-repeat 0 0/cover;
+      background: url(../img/about-brown.webp) no-repeat 0 0/cover;
       display: block;
       position: absolute;
       left: 0; top: 0;
@@ -430,7 +430,7 @@ section{
 }
 
 .catalog{
-  background: url(../img/catalog-bg.png) no-repeat left bottom/50% 100%;
+  background: url(../img/catalog-bg.webp) no-repeat left bottom/50% 100%;
   background-size: 900px 100%;
   padding-top: res(54, 101);
   padding-bottom: res(50, 125);
@@ -661,7 +661,7 @@ section{
     &:before{
       content: "";
       mix-blend-mode: difference;
-      background: url(../img/zakaz-bg.png) no-repeat 0 0/cover;
+      background: url(../img/zakaz-bg.webp) no-repeat 0 0/cover;
       display: block;
       position: absolute;
       left: 0;
@@ -833,7 +833,7 @@ section{
       width: 55%;
       height: 100%;
       z-index: 1;
-      background: url(../img/other-bg.png) no-repeat 0 0/100% auto;
+      background: url(../img/other-bg.webp) no-repeat 0 0/100% auto;
     }
   }
   &__btn{
@@ -1002,7 +1002,7 @@ section{
       border-radius: 10px;
       content: "";
       mix-blend-mode: lighten;
-      background: url(../img/about-brown.png) no-repeat 0 0/cover;
+      background: url(../img/about-brown.webp) no-repeat 0 0/cover;
       display: block;
       position: absolute;
       left: 0; top: 0;
@@ -1055,7 +1055,7 @@ section{
     background: #FCFAD6;
     &:before{
       mix-blend-mode: exclusion;
-      background-image: url(../img/other_right_bg.png);
+      background-image: url(../img/other_right_bg.webp);
     }
     @media(max-width:767px){
       padding: 2rem 1rem;
@@ -1167,7 +1167,7 @@ section{
       border-radius: 10px;
       content: "";
       mix-blend-mode: lighten;
-      background: url(../img/about-brown.png) no-repeat 0 0/cover;
+      background: url(../img/about-brown.webp) no-repeat 0 0/cover;
       display: block;
       position: absolute;
       left: 0; top: 0;
@@ -1203,7 +1203,7 @@ $quality_width: 1070px;
 $quality_left: calc((100vw - 1654px + 32px) / 2  + 1070px);
 
 .quality{
-  background: url(../img/quality-bg.png) no-repeat 0 0/100% 100%;
+  background: url(../img/quality-bg.webp) no-repeat 0 0/100% 100%;
   position: relative;
   @media(min-width:768px){
     background-size: 64% 100%;
@@ -1419,7 +1419,7 @@ $quality_left: calc((100vw - 1654px + 32px) / 2  + 1070px);
     margin-top: res(120, 150);
     border-radius: 10px;
     padding: res(30, 50) res(16, 50);
-    background: #563D25 url(../img/product-bottom.png) 0 0/100% 100%;
+    background: #563D25 url(../img/product-bottom.webp) 0 0/100% 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
