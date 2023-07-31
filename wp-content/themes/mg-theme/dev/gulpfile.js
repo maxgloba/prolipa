@@ -60,7 +60,7 @@ gulp.task('images', function () {
 
 gulp.task('browser-sync', function() {
   browserSync.init({
-    proxy: "localhost:8888/prolipa",
+    proxy: "prolipa.loc",
     watch: true,
     open: false,
     notify: false,
