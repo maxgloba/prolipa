@@ -79,7 +79,14 @@ section{
       font-weight: 500;
       line-height: 1.5;
       position: relative;
+      z-index: 2;
       padding-left: res(30, 38);
+      @media(min-width:768px){
+        max-width: 333px;
+      }
+      @media(min-width:992px){
+        max-width: none;
+      }
       svg{
         display: block;
         position: absolute;
@@ -299,10 +306,10 @@ section{
         transform: translateY(res(-30, -60));
       }
       &:nth-child(3){
-        transform: translateY(res(-80, -110));
+        transform: translateY(res(-50, -110));
       }
       &:nth-child(4){
-        transform: translateY(res(-185, -210));
+        transform: translateY(res(-100, -210));
       }
     }
     &:nth-child(4){
@@ -440,9 +447,9 @@ section{
   &__tabs{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     position: relative;
     overflow: hidden;
-    flex-wrap: wrap;
   }
   &__nav{
     width: 100%;
@@ -466,7 +473,7 @@ section{
       h6{
         font-size: 18px;
         font-weight: 700;
-        margin-bottom: 30px;
+        margin-bottom: res(10,30);
       }
       p{
         font-size: 14px;
@@ -640,6 +647,9 @@ section{
   }
   @media(min-width:1200px){
     margin-top: -90px;
+    margin-bottom: 90px;
+  }
+  @media(min-width:1666px){
     margin-bottom: 170px;
   }
   &__wrap{
@@ -805,7 +815,10 @@ section{
     position: relative;
   }
   .section-titles{
-    margin-bottom: res(30, 96);
+    margin-bottom: res(30, 76);
+    @media(min-width:1666px){
+      margin-bottom: rem(96);
+    }
   }
   &__svg{
     position: absolute;
@@ -850,9 +863,6 @@ section{
     z-index: 2;
     transition: .5s ease;
     transform: translateY(3px);
-    @media(min-width:768px){
-
-    }
     &.active{
       color: #90B24C;
       border-bottom-color: #789739;
@@ -1104,10 +1114,15 @@ section{
     z-index: 2;
   }
   &__list{
-    @media(min-width:992px){
+    @media(min-width:576px){
       display: flex;
-      justify-content: space-between;
       flex-wrap: wrap;
+      column-gap: 20px;
+      row-gap: 10px;
+    }
+    @media(min-width:992px){
+      justify-content: space-between;
+      gap: 0px;
       margin-top: -160px;
       margin-bottom: 68px;
     }
@@ -1123,6 +1138,10 @@ section{
     background: #FFF;
     position: relative;
     margin-bottom: res(16, 30);
+    @media(min-width:576px){
+      width: calc(50% - 15px);
+      max-width: calc(50% - 15px);
+    }
     @media(min-width:992px){
       width: calc(100% / 4 - 15px);
       &:first-child{
@@ -1354,7 +1373,7 @@ $quality_left: calc((100vw - 1654px + 32px) / 2  + 1070px);
 .products{
   padding-top: res(50, 150);
   padding-bottom: res(50, 80);
-  &__bg{
+  &__bg {
     position: absolute;
     right: 50%;
     top: 0;
@@ -1362,7 +1381,7 @@ $quality_left: calc((100vw - 1654px + 32px) / 2  + 1070px);
     transform: rotate(169.563deg);
     max-width: 125%;
     width: 125%;
-  }
+}
   .container{
     position: relative;
     z-index: 2;
@@ -1394,15 +1413,6 @@ $quality_left: calc((100vw - 1654px + 32px) / 2  + 1070px);
         width: 9px;
         height: auto;
       }
-      @media(max-width:767px){
-        top: calc(100% + 16px);
-        &__prev{
-          left: 2rem;
-        }
-        &__next{
-          right: 2rem;
-        }
-      }
       @media(min-width:768px){
         &__prev{
           transform: translateX(-25%);
@@ -1424,7 +1434,7 @@ $quality_left: calc((100vw - 1654px + 32px) / 2  + 1070px);
   &__bottom{
     position: relative;
     min-height: 576px;
-    margin-top: res(120, 150);
+    margin-top: res(60, 150);
     border-radius: 10px;
     padding: res(30, 50) res(16, 50);
     background: #563D25 url(../img/product-bottom.png) 0 0/100% 100%;
@@ -1457,13 +1467,17 @@ $quality_left: calc((100vw - 1654px + 32px) / 2  + 1070px);
     }
   }
   &__yellow{
-    min-height: 183px;
     border-radius: 20px;
     background: #FCFAD6;
     padding: res(16, 34) res(16, 34) res(16, 21);
     text-align: center;
     position: relative;
+    @media(min-width:768px){
+      margin-top: rem(60);
+    }
     @media(min-width:992px){
+      margin-top: 0;
+      min-height: 183px;
       max-width: 571px;
       margin-left: 32px;
     }

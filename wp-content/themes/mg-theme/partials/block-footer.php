@@ -20,7 +20,7 @@
         <?php endif; ?>
       </div>
 
-      <div class="main-footer__inner">
+      <div class="main-footer__wrapper">
       <?php if( have_rows('footer_info', 'option') ): ?>
       <div class="main-footer__info-row">
         <?php while( have_rows('footer_info', 'option') ): the_row(); ?>
