@@ -13,6 +13,13 @@
     justify-content: space-between;
     align-items: center;
     padding: res(10, 17.5) 0;
+    
+    a {
+      text-align: right;
+      @media(max-width:1666px){
+        font-size: rem(16);
+      }
+    }
   }
   &__info{
     font-size: rem(14);
