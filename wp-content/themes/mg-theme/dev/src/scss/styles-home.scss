@@ -1055,6 +1055,7 @@ section{
     background: #FCFAD6;
     &:before{
       mix-blend-mode: exclusion;
+      background-image: url(../img/other_right_bg.png);
     }
     @media(max-width:767px){
       padding: 2rem 1rem;
