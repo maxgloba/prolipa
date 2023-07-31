@@ -15,8 +15,8 @@ $(document).ready(function(){
       slidesToShow: 1,
       slidesToScroll: 1,
       asNavFor: `#slick__nav-${slider.dataset.nav}`,
-      prevArrow: '<button type="button" class="slick-arrow slick-arrow__prev">' + sliderBtnLeft + '</button>',
-      nextArrow: '<button type="button" class="slick-arrow slick-arrow__next">' + sliderBtnRight + '</button>',
+      prevArrow: '<button title="prev arrow" type="button" class="slick-arrow slick-arrow__prev">' + sliderBtnLeft + '</button>',
+      nextArrow: '<button title="next arrow" type="button" class="slick-arrow slick-arrow__next">' + sliderBtnRight + '</button>',
     });
 
     $(`#slick__nav-${slider.dataset.nav}`).slick({
@@ -33,8 +33,8 @@ $(document).ready(function(){
     $(this).slick({
       slidesToShow: 4,
       slidesToScroll: 1,
-      prevArrow: '<button type="button" class="slick-arrow slick-arrow__prev"><svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.63159 18.158L1.4737 10.0001L9.63159 1.84217" stroke="#8C7765" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
-      nextArrow: '<button type="button" class="slick-arrow slick-arrow__next"><svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.36841 1.84204L9.5263 9.99994L1.36841 18.1578" stroke="#8C7765" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
+      prevArrow: '<button title="prev arrow" type="button" class="slick-arrow slick-arrow__prev"><svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.63159 18.158L1.4737 10.0001L9.63159 1.84217" stroke="#8C7765" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
+      nextArrow: '<button title="next arrow" type="button" class="slick-arrow slick-arrow__next"><svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.36841 1.84204L9.5263 9.99994L1.36841 18.1578" stroke="#8C7765" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
       responsive: [
         {
           breakpoint: 1500,
@@ -62,8 +62,8 @@ $(document).ready(function(){
     $(this).slick({
       slidesToShow: 4,
       slidesToScroll: 1,
-      prevArrow: '<button type="button" class="slick-arrow slick-arrow__prev"><svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.63159 18.158L1.4737 10.0001L9.63159 1.84217" stroke="#8C7765" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
-      nextArrow: '<button type="button" class="slick-arrow slick-arrow__next"><svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.36841 1.84204L9.5263 9.99994L1.36841 18.1578" stroke="#8C7765" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
+      prevArrow: '<button title="prev arrow" type="button" class="slick-arrow slick-arrow__prev"><svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.63159 18.158L1.4737 10.0001L9.63159 1.84217" stroke="#8C7765" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
+      nextArrow: '<button title="next arrow" type="button" class="slick-arrow slick-arrow__next"><svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.36841 1.84204L9.5263 9.99994L1.36841 18.1578" stroke="#8C7765" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
       responsive: [
         {
           breakpoint: 1200,

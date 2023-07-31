@@ -4,6 +4,8 @@
   src: url('./fonts/akrobat/Akrobat-ExtraLight.woff') format('woff'),
        url('./fonts/akrobat/Akrobat-ExtraLight.woff2') format('woff2');
   font-weight: 300;
+  font-style: normal;
+  font-display: fallback;
 }
 @font-face {
   font-family: 'Akrobat';
@@ -11,6 +13,8 @@
   src: url('./fonts/akrobat/Akrobat-Light.woff') format('woff'),
        url('./fonts/akrobat/Akrobat-Light.woff2') format('woff2');
   font-weight: 400;
+  font-style: normal;
+  font-display: fallback;
 }
 @font-face {
   font-family: 'Akrobat';
@@ -18,6 +22,8 @@
   src: url('./fonts/akrobat/Akrobat-Regular.woff') format('woff'),
        url('./fonts/akrobat/Akrobat-Regulasr.woff2') format('woff2');
   font-weight: 500;
+  font-style: normal;
+  font-display: fallback;
 }
 @font-face {
   font-family: 'Akrobat';
@@ -25,6 +31,8 @@
   src: url('./fonts/akrobat/Akrobat-SemiBold.woff') format('woff'),
        url('./fonts/akrobat/Akrobat-SemiBold .woff2') format('woff2');
   font-weight: 600;
+  font-style: normal;
+  font-display: fallback;
 }
 @font-face {
   font-family: 'Akrobat';
@@ -32,6 +40,8 @@
   src: url('./fonts/akrobat/Akrobat-Bold.woff') format('woff'),
        url('./fonts/akrobat/Akrobat-Bold.woff2') format('woff2');
   font-weight: 700;
+  font-style: normal;
+  font-display: fallback;
 }
 @font-face {
   font-family: 'Akrobat';
@@ -39,6 +49,8 @@
   src: url('./fonts/akrobat/Akrobat-ExtraBold.woff') format('woff'),
        url('./fonts/akrobat/Akrobat-ExtraBold.woff2') format('woff2');
   font-weight: 800;
+  font-style: normal;
+  font-display: fallback;
 }
 @font-face {
   font-family: 'Akrobat';
@@ -46,4 +58,6 @@
   src: url('./fonts/akrobat/Akrobat-Black.woff') format('woff'),
        url('./fonts/akrobat/Akrobat-Black.woff2') format('woff2');
   font-weight: 900;
+  font-style: normal;
+  font-display: fallback;
 }

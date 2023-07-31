@@ -1,7 +1,7 @@
 <header class="main-header">
   <div class="container">
     <div class="main-header__row">
-      <a href="<?php echo home_url(); ?>" class="logo"><?php the_field('logo', 'option'); ?></a>
+      <a href="<?php echo home_url(); ?>" class="logo" title="logo"><?php the_field('logo', 'option'); ?></a>
 
       <div class="main-header__slogan"><?php the_field('header_slogan', 'option'); ?></div>
 
@@ -14,9 +14,9 @@
         <?php endwhile; ?>
       <?php endif; ?>
 
-      <a href="tel:<?php the_field('phone', 'option'); ?>" class="btn__phone"><span><?php the_field('phone', 'option'); ?></span></a>
+      <a href="tel:<?php the_field('phone', 'option'); ?>" class="btn__phone" title="telephone"><span><?php the_field('phone', 'option'); ?></span></a>
 
-      <button class="btn btn-white"><span>Заказать звонок</span></button>
+      <button class="btn btn-white" title="Заказать звонок"><span>Заказать звонок</span></button>
     </div>
   </div>
 </header>
