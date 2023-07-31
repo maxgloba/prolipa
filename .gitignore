@@ -58,4 +58,5 @@ node_modules/
 *.zip
 *.rar
 
-/wp-content/themes/mg-theme/dev/gulpfile.js
+gulpfile.js
+.htaccess
