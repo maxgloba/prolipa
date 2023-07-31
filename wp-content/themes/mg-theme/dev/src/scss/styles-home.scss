@@ -1351,13 +1351,16 @@ $quality_left_1666: calc((100vw - 1654px + 32px) / 2  + 1070px);
     position: relative;
     padding-bottom: 240px;
     width: calc(100% - 2rem);
+    @media(min-width:575px) and (max-width:800px){
+      margin-bottom: 30px;
+    }
     @media(max-width:575px){
       margin-left: auto;
       margin-right: auto;
     }
     @media(min-width:576px){
       padding-bottom: 145px;
-      margin-left: 50%;
+      margin-left: auto;
       width: 50%;
     }
     @media(min-width:800px){
@@ -1376,7 +1379,6 @@ $quality_left_1666: calc((100vw - 1654px + 32px) / 2  + 1070px);
     }
     @media(min-width:1666px){
       left: $quality_left_1666;
-      left: 2px;
       padding: 85px;
     }
   }
@@ -1412,8 +1414,11 @@ $quality_left_1666: calc((100vw - 1654px + 32px) / 2  + 1070px);
       border-radius: 20px;
       border: 2px dashed #FFF;
       position: relative;
-      padding: 20px 60px 20px 84px;
+      padding: 20px 20px 20px 84px;
       display: inline-block;
+      @media(min-width:1666px){
+        padding: 20px 60px 20px 84px;
+      }
       svg{
         display: block;
         position: absolute;
