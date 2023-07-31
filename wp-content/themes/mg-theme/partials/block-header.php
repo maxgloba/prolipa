@@ -1,9 +1,10 @@
 <header class="main-header">
   <div class="container">
     <div class="main-header__row">
-      <a href="<?php echo home_url(); ?>" class="logo" title="logo"><?php the_field('logo', 'option'); ?></a>
-
-      <div class="main-header__slogan"><?php the_field('header_slogan', 'option'); ?></div>
+      <div class="main-header__logo">
+        <a href="<?php echo home_url(); ?>" class="logo" title="logo"><?php the_field('logo', 'option'); ?></a>
+        <div class="main-header__slogan"><?php the_field('header_slogan', 'option'); ?></div>
+      </div>
 
       <?php if( have_rows('info', 'option') ): $i = 0; ?>
         <?php while( have_rows('info', 'option') ): the_row(); $i++; ?>

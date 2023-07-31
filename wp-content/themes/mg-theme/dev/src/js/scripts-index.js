@@ -166,5 +166,6 @@ const qualityFunc = () => {
 setTimeout(()=>{
   qualityFunc()
 }, 500);
-document.addEventListener('scroll', qualityFunc())
-document.addEventListener('resize', qualityFunc())
+window.addEventListener('resize', () => {
+  qualityFunc()
+}, true);

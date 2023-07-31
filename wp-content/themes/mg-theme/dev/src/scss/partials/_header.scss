@@ -8,6 +8,9 @@
   @media(max-width:1666px){
     background: #fff;
   }
+  .container{
+    position: relative;
+  }
   &__row{
     display: flex;
     justify-content: space-between;
@@ -22,16 +25,26 @@
     }
   }
   &__info{
-    font-size: rem(14);
+    font-size: res(12, 14);
     font-weight: 400;
     line-height: 1.5;
-    display: flex;
-    margin-left: clamp(15px, cqi(42), 42px);
-    @media(max-width:1199px){
-      display: none;
+    display: none;
+    margin-left: 10px;
+    @media(min-width:992px){
+      display: flex;
+      align-items: flex-start;
+    }
+    @media(min-width:1200px){
+      margin-left: clamp(10px, cqi(42), 42px);
     }
     svg{
-      margin-right: rem(10);
+      margin-right: res(5, 10);
+      height: auto;
+      width: 18px;
+      display: block;
+      @media(min-width:1200px){
+        width: 24px;
+      }
       @media(max-width:1665px){
         path{ fill: #388B2A; }
       }
@@ -46,20 +59,28 @@
     }
   }
   &__slogan{
-    @media(max-width:767px){
-      display: none;
-    }
-    @media(min-width:1200px){
-      margin-right: 30px;
+    display: none;
+    font-size: 14px;
+    @media(min-width:576px){
+      display: block;
     }
     @media(min-width:1666px){
+      font-size: 16px;
+    }
+  }
+  &__logo{
+    margin-right: 30px;
+    @media(min-width:1666px){
       margin-right: clamp(100px, cqi(255), 255px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
   .logo{
     display: block;
     width: res(80, 151);
-    @media(min-width:768px){
+    @media(min-width:1666px){
       margin-right: clamp(10px, cqi(22), 22px);
     }
     svg{
@@ -70,7 +91,8 @@
   }
   .btn__phone{
     margin-left: auto;
-    margin-right: clamp(15px, cqi(49), 49px);
+    margin-right: clamp(10px, cqi(49), 49px);
+    font-size: res(14, 16);
   }
   &.scrolling{
     background: #fff;
@@ -82,8 +104,14 @@
     }
   }
   .btn-white{
-    @media(max-width:1665px){
+    @media(max-width:575px){
       display: none;
+    }
+    font-size: 14px;
+    padding: 10px 15px;
+    @media(min-width:1200px){
+      font-size: 16px;
+      padding: 13px 20px;
     }
   }
 }
