@@ -1032,3 +1032,18 @@ modalClose.forEach(el => {
 
 /* copyright */
 document.getElementById('copyrightYear').innerHTML = new Date().getFullYear();
+
+const qualityFunc = () => {
+  console.log(window.innerWidth > 575 +' - '+ window.innerWidth < 800);
+  if(window.innerWidth > 575 && window.innerWidth < 800){
+    const qualityImg = document.querySelector('.quality__item-img img')
+    document.querySelector('.quality__brown').style.marginTop = `-${qualityImg.clientHeight}px`
+  } else {
+    document.querySelector('.quality__brown').style.marginTop = `0`
+  }
+}
+setTimeout(()=>{
+  qualityFunc()
+}, 500);
+document.addEventListener('scroll', qualityFunc())
+document.addEventListener('resize', qualityFunc())
