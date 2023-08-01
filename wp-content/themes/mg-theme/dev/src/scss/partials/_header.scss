@@ -33,9 +33,10 @@
     @media(min-width:992px){
       display: flex;
       align-items: flex-start;
+      margin-left: 15px;
     }
-    @media(min-width:1200px){
-      margin-left: clamp(10px, cqi(42), 42px);
+    @media(min-width:1666px){
+      margin-left: 42px;
     }
     svg{
       margin-right: res(5, 10);
@@ -51,6 +52,11 @@
     }
     &-sm{
       font-size: rem(12);
+    }
+  }
+  &__first{
+    @media(min-width:992px) and (max-width:1665px){
+      margin-left: auto;
     }
   }
   &__white{
@@ -69,7 +75,6 @@
     }
   }
   &__logo{
-    margin-right: 30px;
     @media(min-width:1666px){
       margin-right: clamp(100px, cqi(255), 255px);
       display: flex;
@@ -90,9 +95,17 @@
     }
   }
   .btn__phone{
+    margin-right: 10px;
     margin-left: auto;
-    margin-right: clamp(10px, cqi(49), 49px);
     font-size: res(14, 16);
+    @media(min-width:992px){
+      margin-right: 20px;
+      margin-left: 30px;
+    }
+    @media(min-width:1666px){
+      margin-left: auto;
+      margin-right: 49px;
+    }
   }
   &.scrolling{
     background: #fff;

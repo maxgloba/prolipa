@@ -8,7 +8,7 @@
 
       <?php if( have_rows('info', 'option') ): $i = 0; ?>
         <?php while( have_rows('info', 'option') ): the_row(); $i++; ?>
-          <div class="main-header__info <?php if($i === 2 || $i === 3){ echo 'main-header__white'; } ?>">
+          <div class="main-header__info <?php if($i === 2 || $i === 3){ echo 'main-header__white'; } else { echo 'main-header__first'; } ?>">
             <?php the_sub_field('icon'); ?>
             <?php the_sub_field('text'); ?>
           </div>
