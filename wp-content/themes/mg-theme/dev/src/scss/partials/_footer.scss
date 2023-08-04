@@ -67,9 +67,6 @@
         display: block;
         @media(max-width:991px){
           margin-top: 1rem;
-          margin-left: auto;
-          margin-right: auto;
-          margin-bottom: 2rem;
         }
         img{
           position: absolute;
@@ -91,14 +88,20 @@
   }
   &__contact {
     width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    @media(max-width:575px){
+      width: 100%;
+      justify-content: space-between;
+    }
+    @media(min-width:576px){
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
     @media(min-width:768px){
      width: 184px;
+
     }
   }
-  &__slogan{}
   .logo{
     display: block;
     margin-right: clamp(10px, cqi(22), 22px);

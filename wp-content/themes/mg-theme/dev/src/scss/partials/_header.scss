@@ -25,14 +25,16 @@
     }
   }
   &__info{
-    font-size: res(12, 14);
+    font-size: res(11, 14);
     font-weight: 400;
     line-height: 1.5;
     display: none;
-    margin-left: 10px;
-    @media(min-width:992px){
+    margin-left: 5px;
+    @media(min-width:675px){
       display: flex;
       align-items: flex-start;
+    }
+    @media(min-width:768px){
       margin-left: 15px;
     }
     @media(min-width:1666px){
@@ -41,8 +43,11 @@
     svg{
       margin-right: res(5, 10);
       height: auto;
-      width: 18px;
+      width: 14px;
       display: block;
+      @media(min-width:768px){
+        width: 18px;
+      }
       @media(min-width:1200px){
         width: 24px;
       }
@@ -55,6 +60,12 @@
     }
   }
   &__first{
+    @media(max-width:991px){
+      display: none;
+      & + div{
+        margin-left: auto;
+      }
+    }
     @media(min-width:992px) and (max-width:1665px){
       margin-left: auto;
     }
@@ -67,7 +78,7 @@
   &__slogan{
     display: none;
     font-size: 14px;
-    @media(min-width:576px){
+    @media(min-width:450px){
       display: block;
     }
     @media(min-width:1666px){
@@ -98,6 +109,9 @@
     margin-right: 10px;
     margin-left: auto;
     font-size: res(14, 16);
+    @media(min-width:675px){
+      margin-left: 15px;
+    }
     @media(min-width:992px){
       margin-right: 20px;
       margin-left: 30px;
@@ -117,7 +131,7 @@
     }
   }
   .btn-white{
-    @media(max-width:575px){
+    @media(max-width:450px){
       display: none;
     }
     font-size: 14px;
