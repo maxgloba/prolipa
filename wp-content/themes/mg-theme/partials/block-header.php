@@ -15,9 +15,9 @@
         <?php endwhile; ?>
       <?php endif; ?>
 
-      <a href="tel:<?php the_field('phone', 'option'); ?>" class="btn__phone" title="telephone"><span><?php the_field('phone', 'option'); ?></span></a>
+      <a data-tel="<?php the_field('phone', 'option'); ?>" class="btn__phone" title="telephone"><span><?php the_field('phone', 'option'); ?></span></a>
 
-      <button class="btn btn-white" title="Заказать звонок"><span>Заказать звонок</span></button>
+      <button class="btn btn-white modalOpen" title="Заказать звонок"><span>Заказать звонок</span></button>
     </div>
   </div>
 </header>

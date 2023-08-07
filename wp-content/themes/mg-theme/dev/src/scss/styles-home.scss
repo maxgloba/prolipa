@@ -56,6 +56,9 @@ section{
 .banner{
   position: relative;
   background: url(../img/banner-bg.webp) no-repeat center top/cover;
+  @media(max-width:767px){
+    padding-bottom: 2rem;
+  }
   h1{
     margin-bottom: res(5, 15);
   }
@@ -130,13 +133,13 @@ section{
     z-index: 4;
     @media(max-width:767px){
       text-align: center;
-      margin-top: 100px;
     }
     &__inner{
       padding: res(10, 50) res(15, 50);
-      border-radius: 30px 30px 0px 0px;
+      border-radius: 0px 0px 30px 30px;
       background: #FFF;
       @media(min-width:768px){
+        border-radius: 30px 30px 0px 0px;
         display: inline-flex;
         justify-content: space-between;
         align-items: flex-start;
@@ -191,7 +194,7 @@ section{
   &__male{
     position: relative;
     z-index: 3;
-    @media(max-width:767px){
+    @media(max-width:992px){
       display: none;
     }
     @media(min-width:768px){
@@ -263,7 +266,14 @@ section{
       left: 50%;
       transform: translateX(-55%);
     }
-    @media(min-width:768px){
+    @media(min-width:768px) and (max-width: 991px){
+      position: absolute;
+      width: 115%;
+      bottom: 15%;
+      left: -25%;
+      max-width: 115%;
+    }
+    @media(min-width:992px){
       position: absolute;
       width: 75%;
       bottom: -18%;
@@ -273,8 +283,14 @@ section{
 }
 
 .about{
-  padding-top: clamp(4.375rem, 12.69649cqi, 13.125rem);
+  padding-top: 2rem;
   padding-bottom: 50px;
+  @media(min-width:768px){
+    padding-top: res(50, 100);
+  }
+  @media(min-width:1666px){
+    padding-top: 13.125rem;
+  }
   &__list{
     display: flex;
     flex-wrap: wrap;
@@ -293,6 +309,11 @@ section{
     @media(min-width:768px){
       width: calc(100% / 4);
       padding: res(110, 140) 1rem res(30, 55) res(16, 46);
+    }
+    &:last-child{
+      @media(min-width:1200px) and (max-width:1665px){
+        padding-right: 70px;
+      }
     }
     p{
       position: relative;
@@ -388,6 +409,9 @@ section{
     line-height: 1.58;
     padding: res(30, 58);
     @media(min-width:1200px){
+      width: 77%;
+    }
+    @media(min-width:1666px){
       width: 64.7%;
     }
     &:before{
@@ -446,18 +470,22 @@ section{
   &__doski{
     z-index: 2;
     margin-top: 30px;
+    position: relative;
     @media(min-width:768px){
       margin-top: 0;
       position: absolute;
       top: 7px;
       left: 35%;
     }
+    @media(min-width:1200px) and (max-width: 1665px){
+      left: 40%;
+    }
     img{
       display: block;
     }
   }
   &__sign{
-    display: flex;
+    display: inline-flex;
     align-items: flex-start;
     padding: 9px 21px;
     border-radius: 10px;
@@ -465,9 +493,13 @@ section{
     background: #FFF;
     font-size: res(14, 16);
     margin-top: 10px;
+    position: absolute;
+    top: 30px;
+    @media(max-width:767px){
+      left: 0;
+    }
     @media(min-width:768px){
       margin-top: 0;
-      position: absolute;
       top: 75px;
       right: 230px;
       transform: translateX(170px);
@@ -631,6 +663,9 @@ section{
         margin-left: auto;
         margin-right: auto;
       }
+      @media(max-width:1199px){
+        display: none !important;
+      }
       img{
         display: block;
         width: 100%;
@@ -659,7 +694,7 @@ section{
     }
     h4{
       margin-bottom: 15px;
-      font-size: rem(40);
+      font-size: rem(26);
       @media(min-width:768px){
         font-size: 20px;
         margin-bottom: 25px;
@@ -736,7 +771,7 @@ section{
         font-size: 14px;
       }
       span{
-        font-size: rem(34);
+        font-size: rem(20);
         font-weight: 700;
         display: inline-block;
         margin-left: 1rem;
@@ -747,11 +782,11 @@ section{
       }
     }
     .btn{
-      padding: 1.5rem 4rem;
+      padding: 1rem 4rem;
       width: 100%;
       @media(max-width:1199px){
         font-weight: 700;
-        font-size: rem(30);
+        font-size: rem(18);
       }
       @media(min-width:1200px){
         padding: 10px 25px;
@@ -859,7 +894,6 @@ section{
       border-radius: 10px;
       background: #FFF;
       font-size: 15px;
-      width: 100%;
       position: relative;
       margin-top: 1rem;
       @media(min-width:768px){
@@ -887,6 +921,17 @@ section{
         position: absolute;
         left: 20px;
         top: 9px;
+      }
+      @media(min-width:768px) and (max-width:1199px){
+        top: 5%;
+        left: -10%;
+        padding-left: 40px;
+        svg{
+          left: 10px;
+        }
+        span{
+          font-size: 14px;
+        }
       }
     }
   }
@@ -1217,6 +1262,12 @@ section{
         width: auto;
         bottom: 0;
       }
+      @media(max-width:767px){
+        height: 90%;
+      }
+      @media(max-width:515px){
+        height: 70%;
+      }
       @media(min-width:1666px){
         top: 5px;
         height: 100%;
@@ -1231,18 +1282,26 @@ section{
       background-image: url(../img/other_right_bg.webp);
     }
     @media(max-width:767px){
-      padding: 2rem 1rem;
+      padding: 2rem 1rem 0;
       text-align: center;
+      display: flex;
+      align-items: center;
+    }
+    @media(max-width:490px){
+      display: block;
+      padding-bottom: 2rem;
     }
     img{
       display: block;
       position: relative;
       z-index: 2;
       @media(max-width:767px){
+        width: 60%;
+      }
+      @media(max-width:515px){
         width: 250px;
         margin-left: auto;
         margin-right: auto;
-        margin-bottom: 1rem;
       }
       @media(min-width:768px){
         position: absolute;
@@ -1538,6 +1597,7 @@ $quality_left_1666: calc((100vw - 1654px + 32px) / 2  + 1070px);
       top: 0;
       width: auto;
       padding: 3rem 3rem rem(250);
+      z-index: 10;
     }
     @media(min-width:992px){
       left: $quality_left_992;
@@ -1753,155 +1813,5 @@ $quality_left_1666: calc((100vw - 1654px + 32px) / 2  + 1070px);
   }
 }
 
-.field{
-  margin-bottom: 10px;
-  &-flex{
-    display: flex;
-  }
-  label{
-    color: rgba(0, 0, 0, 0.4);
-    font-family: 'Akrobat', sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1.57;
-    display: block;
-    margin-bottom: 5px;
-  }
-  input{
-    display: block;
-    width: 100%;
-    padding: 14px 20px;
-    border-radius: 5px;
-    background: #F2F2F2;
-    border: none;
-    &::placeholder {
-      color: rgba(0, 0, 0, 0.7);
-    }
-    &[type="checkbox"]{
-      border-radius: 2px;
-      border: 1px solid #C0C0C0;
-      width: 17px;
-      height: 17px;
-      & + label{
-        padding-left: 15px;
-        color: rgba(0, 0, 0, 1);
-      }
-    }
-  }
-}
 
 
-.form{
-  &__wrap{
-    border-radius: 10px;
-    border: 5px solid #FFF;
-    background: #FFF;
-    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.10), 0px 4px 20px 0px rgba(0, 0, 0, 0.10) inset;
-    padding: res(30, 40) res(16, 30);
-    position: relative;
-    z-index: 2;
-    @media(min-width:768px){
-      max-width: 410px;
-    }
-    @media(min-width:1500px){
-      margin-right: 180px;
-    }
-    h6{
-      color: #000;
-      text-align: center;
-      font-family: 'Akrobat';
-      font-size: 18px;
-      font-weight: 700;
-      line-height: 1.4;
-      text-transform: uppercase;
-      margin-bottom: 40px;
-      @media(min-width:768px){
-        font-size: 20px;
-      }
-      span{
-        color: #388B2A;
-        @media(min-width:768px){
-          display: block;
-        }
-      }
-    }
-  }
-  button[type="submit"]{
-    width: 100%;
-    display: block;
-  }
-}
-
-
-.modal{
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100vh;
-  width: 100vw;
-  background: #563D25;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 99;
-  opacity: 0;
-  visibility: hidden;
-  z-index: -1;
-  transition: opacity 1s ease;
-  &.active{
-    opacity: 1;
-    visibility: visible;
-    z-index: 99;
-  }
-  &__bg{
-    fill: rgba(240, 240, 240, 0.02);
-    position: absolute;
-    z-index: 1;
-    left: 50%; top: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    min-height: 100%;
-    display: block;
-    width: auto;
-    height: auto;
-  }
-  &__wrap{
-    position: relative;
-    padding: 1rem;
-    @media(min-width:768px){
-      padding: 0;
-    }
-  }
-  &__close{
-    position: absolute;
-    right: 1rem;
-    top: -2rem;
-    z-index: 5;
-    cursor: pointer;
-    @media(min-width:768px){
-      right: -2rem;
-    }
-    &:hover{
-      opacity: .7;
-    }
-  }
-  &__img{
-    position: absolute;
-    left: 0;
-    top: 30%;
-    transform: translateX(-100%);
-    z-index: 1;
-    height: 80%;
-    width: auto;
-  }
-  .form{
-    z-index: 2;
-    &__wrap{
-      margin: 0;
-    }
-  }
-  .container{
-    position: relative;
-    z-index: 2;
-  }
-}

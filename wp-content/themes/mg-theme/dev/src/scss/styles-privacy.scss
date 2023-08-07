@@ -10,8 +10,14 @@
 
 
 .privacy{
-  padding-top: res(70, 140);
+  padding-top: res(70, 140) !important;
   @media(min-width:1666px){
-    padding-top: 164px;
+    padding-top: 164px !important;
+  }
+  .container{
+    max-width: 100%;
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

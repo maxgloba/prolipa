@@ -11,7 +11,7 @@ add_action( 'wp_enqueue_scripts', 'replace_core_jquery_version' );
 
 add_theme_support( 'post-thumbnails' );
 
-// include('include/clear.php');
+// include('functions/idna_convert.class.php');
 
 add_theme_support( 'menus' );
 
@@ -31,6 +31,7 @@ function front_scripts() {
 	// Privacy page
 	if( is_page_template( array( 'templates/page-privacy.php' ) ) ){
 		wp_enqueue_style( 'styles', get_template_directory_uri().'/css/styles-privacy.css');
+		wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/scripts-privacy.js', false, false, 'in_footer');
 	}
 
 // 404 page
