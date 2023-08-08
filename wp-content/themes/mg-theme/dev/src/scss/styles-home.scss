@@ -260,7 +260,7 @@ section{
     position: relative;
     z-index: 4;
     width: 100%;
-    @media(max-width:768px){
+    @media(max-width:767px){
       max-width: 120%;
       width: 120%;
       left: 50%;
@@ -578,7 +578,7 @@ section{
     width: 100%;
     display: flex;
     overflow: hidden;
-    @media(max-width:575px){
+    @media(max-width:1665px){
       display: none;
     }
     @media(min-width:1666px){
@@ -592,6 +592,9 @@ section{
     &.active{
       @media(max-width:575px){
         display: block;
+      }
+      @media(max-width:1665px){
+        display: flex;
       }
       @media(min-width:576px){
         right: 0;
@@ -614,7 +617,13 @@ section{
     width: 100%;
     margin-bottom: 10px;
     @media(min-width:768px){
-      width: calc(50% - 12px);
+      width: calc(100% / 2 - 12px);
+    }
+    @media(min-width:992px){
+      width: calc(100% / 3 - 12px);
+    }
+    @media(min-width:1200px){
+      width: calc(100% / 2 - 12px);
     }
     @media(min-width:1666px){
       padding: 26px 20px 10px;
@@ -693,43 +702,37 @@ section{
       text-transform: none;
     }
     h4{
-      margin-bottom: 15px;
-      font-size: rem(26);
-      @media(min-width:768px){
-        font-size: 20px;
-        margin-bottom: 25px;
-      }
+      margin-bottom: res(15, 25);
+      font-size: rem(20);
     }
     h5{
       margin-bottom: 15px;
       font-size: rem(18);
       @media(max-width:1199px){
         display: inline-block;
-        border-right: 2px solid #fff;
-        padding-right: 1.5rem;
-        margin-right: 1.5rem;
+        border-right: 1px solid #fff;
+        padding-right: 1rem;
+        margin-right: 1rem;
         font-weight: 600;
         font-size: 1rem;
         line-height: 32px;
       }
       @media(max-width:575px){
-        padding-right: 1rem;
-        margin-right: 1rem;
+        padding-right: 0.5rem;
+        margin-right: 0.5rem;
       }
     }
     &__sort{
       margin-bottom: 1rem;
       @media(max-width:1199px){
         display: inline-block;
-        border-right: 2px solid #fff;
-        padding-right: 1.5rem;
-        margin-right: 1.5rem;
         font-weight: 600;
         line-height: 32px;
       }
-      @media(max-width:575px){
+      @media(max-width:767px){
         padding-right: 1rem;
         margin-right: 1rem;
+        border-right: 1px solid #fff;
       }
       @media(min-width:1200px){
         margin-bottom: 15px;
@@ -743,14 +746,13 @@ section{
     }
     &__upakovka{
       color: #000;
-      font-size: rem(18);
+      font-size: rem(14);
       line-height: 1.57;
       margin-bottom: 1rem;
       @media(max-width:1199px){
         display: inline-block;
       }
       @media(min-width:1200px){
-        font-size: 14px;
         margin-bottom: res(30, 62);
       }
       span{
@@ -1503,6 +1505,14 @@ $quality_left_1666: calc((100vw - 1654px + 32px) / 2  + 1070px);
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+  }
+  .section-titles{
+    @media(min-width:800px){
+      width: 45vw;
+    }
+    @media(min-width:1666px){
+      width: $quality_width;
+    }
   }
   &__row{
     position: relative;
